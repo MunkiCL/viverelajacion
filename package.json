@@ -22,7 +22,8 @@
     "gulp-bundle": "~0.2.0",
     "gulp-less": "",
     "gulp-csso": "",
-    "gulp-livereload": ""
+    "gulp-livereload": "",
+    "bower":""
   },
   "engines": {
     "node": ">=0.10.5"
