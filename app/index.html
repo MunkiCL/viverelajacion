@@ -30,21 +30,30 @@
        <header>
         <!-- LOGO -->
             <div class="row">
-                <div class="col-lg-2 col-lg-offset-5">
+                <div class="col-lg-2 col-lg-offset-5 col-xs-5">
+                    <center>
                     <img src="images/img_logo-header.png" alt="logo VivelRelajacion" />
+                    </center>
                 </div>
             </div>
        </header>
        <section>
         <!-- Seccion central -->
             <div class="row">
-                <div class="col-lg-12" id="portada">
+                <div class="col-lg-12 col-xs-12" id="portada">
                     <div class="row">
-                        <div class="col-lg-6" id="saludo">
+                        <div class="col-lg-6 visible-md visible-lg" id="saludo">
                             <p class="strong">¡HOLA!</p>
-                            <p class="strong">PROTO TENDREMOS NUEVA WEB</p>
+                            <p class="strong">PRONTO TENDREMOS NUEVA WEB</p>
                             <p class="light">De todas maneras nos puedes contactar por acá</p>
                             <p class="light"><img style="margin-right:80px" src="/images/img_fono.png"/> +56 (9) 98877675</p>
+                            <p class="light"><a href="mailto:hola@viverelajacion.cl"><img src="/images/img_mail.png"/> hola@viverelajacion.cl</a></p>
+                        </div>
+                        <div class="visible-xs" id="saludo_mobile">
+                            <p class="strong">¡HOLA!</p>
+                            <p class="strong">PRONTO TENDREMOS <br/> NUEVA WEB</p>
+                            <p class="light">De todas maneras nos<br /> puedes contactar por acá</p>
+                            <p class="light"><img style="margin-right:30px" src="/images/img_fono.png"/> +56 (9) 98877675</p>
                             <p class="light"><a href="mailto:hola@viverelajacion.cl"><img src="/images/img_mail.png"/> hola@viverelajacion.cl</a></p>
                         </div>
                     </div>
@@ -55,9 +64,9 @@
                 <div class="col-lg-12" id="services">
                     <p class="title">STORE</p>
                     <div class="row" id="images">
-                        <div class="col-lg-1 offset">
+                        <div class="col-lg-1 visible-lg visible-md offset">
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-xs-12">
                             <div class="thumbnail">
                                 <img  class="img-thumbnail" src="/images/img_cintas.jpg" style="width: 300px; height: 300px;">
                                 <div class="caption">
@@ -67,7 +76,8 @@
                             </div>
 
                         </div>
-                         <div class="col-lg-3">
+
+                         <div class="col-lg-3 col-xs-12">
                             <div class="thumbnail">
                                 <img class="img-thumbnail" src="/images/img_batidos.jpg" style="width: 300px; height: 300px;">
                                 <div class="caption">
@@ -77,7 +87,8 @@
                             </div>
 
                         </div>
-                         <div class="col-lg-3">
+
+                         <div class="col-lg-3 col-xs-12">
                             <div class="thumbnail">
                                 <img class="img-thumbnail" src="/images/img_cremas.jpg" style="width: 300px; height: 300px;">
                                 <div class="caption">
@@ -94,21 +105,24 @@
 
        <footer>
        <div class="row" id="footer1">
-           <div class="col-lg-1 col-lg-offset-1">
+           <div class="col-lg-1 col-xs-5">
                 <img src="/images/img_logo-footer.png" />
            </div>
-           <div class="col-lg-4">
+           <div class="col-lg-4 visible-lg hidden-md col-xs-4" style="margin-left:25px;">
                <p class="strong">Datos de contacto</p>
                <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus justo orci</p>
            </div>
-           <div class="col-lg-2 col-lg-offset-3">
+           <div class="col-lg-2 col-lg-offset-3 col-xs-5" style="float:right;">
                <a href="#" class="facebook"></a>
                <a href="#" class="twitter"></a>
            </div>
        </div>
        <div class="row" id="footer2">
-            <div class="col-lg-3 col-lg-offset-9">
-                <p>Web creada por <a href="http://www.munki.cl"><img src="/images/img_logomunki-footer.png"/></a></p>
+            <div class="col-lg-3 col-lg-offset-9 visible-lg visible-md">
+                <p style="float:right;">Web creada por <a href="http://www.munki.cl"><img src="/images/img_logomunki-footer.png"/></a></p>
+           </div>
+           <div class="visible-xs">
+            <p style="text-align:center">Web creada por <a href="http://www.munki.cl"><img src="/images/img_logomunki-footer.png"/></a></p>
            </div>
        </div>
        </footer>

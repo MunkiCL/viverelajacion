@@ -67,11 +67,12 @@ gulp.task('server',['connect','styles','scripts','watch']);
 // Connect
 gulp.task('connect', $.connect.server({
     root: ['app'],
-    port: 9000,
-    livereload: true,
-    open:{
-        browser:'Google Chrome'
-    }
+    port: 3000,
+    livereload: true
+    // ,
+    // open:{
+    //     browser:'Google Chrome'
+    // }
 }));
 
 // Watch
