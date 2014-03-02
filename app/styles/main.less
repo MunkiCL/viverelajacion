@@ -1,49 +1,36 @@
 @import '../components/bootstrap/less/bootstrap.less';
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 
 body{
     background-color:#FFFFFF;
 }
 
-header{
-    height:123px;
-    position:relative;
-    .col-lg-2{
-        position:absolute;
-        top:0;
-        bottom:0;
-        left:0;
-        right: 0;
-        height: 50%;
-        margin:auto;
-    }
+#header {
+	background: #fff url('../images/img_logo-header.png') no-repeat center center;
+	height: 123px;
+	padding: 10px 0px 30px;
 }
 
 #portada{
-    background-image: url('/images/img_portada.jpg');
-    background-repeat: no-repeat;
+    background: #0b7cab url('../images/img_portada.jpg') no-repeat top center;
     height: 677px;
-    width:100%;
     background-position: center;
     background-size: cover;
     position:relative;
     #saludo{
-        height:300px;
-        width:768px;
+        margin: 150px 15% 0px 15%;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        text-align: center;
         background: rgb(11, 124, 171);
         background: rgba(11, 124, 171, .7);
-        position:absolute;
-        top:0;
-        bottom:0;
-        left:0;
-        right: 0;
-        margin:auto;
         p.strong{
             font-family: 'Open Sans', sans-serif;
             font-weight: 800;
-            color:white;
-            font-size:40px;
+            color: #fff;
+            font-size:35px;
             text-align: center;
+            line-height: 1.0em;
         }
         p.light{
             font-family: 'Open Sans', sans-serif;
@@ -52,7 +39,7 @@ header{
             font-size:25px;
             text-align: center;
             img{
-                margin-right: 20px;
+            	margin-right: 20px;
             }
             a{
                 color:white;
@@ -62,6 +49,10 @@ header{
             }
         }
     }
+}
+
+#contenedor-contacto {
+	padding: 0px 10% 0px 10%;
 }
 
  #services{
@@ -91,8 +82,7 @@ header{
                     color:rgb(11, 124, 171);
                     font-size:20px;
                     text-align: center;
-                    margin-bottom:25px;
-                    margin-top:50px;
+                    margin: 10px 0px 20px;
                 }
                 p{
                     font-family: 'Open Sans', sans-serif;
@@ -108,7 +98,6 @@ header{
 
 }
 
-
 footer{
     #footer1{
         background-color:#004A68;
@@ -121,31 +110,46 @@ footer{
             font-family: 'Open Sans', sans-serif;
             color:#FFF;
             &.strong{
-                font-weight: 800;
-                font-size:16px;
+                font-weight: 600;
+                font-size: 18px;
+                margin-top: auto;
+                margin-bottom: 0px;
             }
             &.light{
                 font-weight: 300;
                 font-size:14px;
+                margin-bottom: auto;
             }
         }
         .twitter{
             float:right;
-            background:url('/images/btn_tw_normal.png') no-repeat;
+            background:url('../images/btn_tw_sobre.png') no-repeat;
             .size(46px,46px);
             margin-right:7px;
             margin-top:10px;
+            opacity: 0.75;
+            -ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=75)"; /*IE 8 hack */
+            -webkit-transition: opacity 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
             &:hover{
-                background:url('/images/btn_tw_sobre.png') no-repeat;
+                opacity: 1.0;
+                -ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=100)"; /*IE 8 hack */
             }
         }
         .facebook{
             margin-top:10px;
             float:right;
-            background:url('/images/btn_fb_normal.png') no-repeat;
+            background:url('../images/btn_fb_sobre.png') no-repeat;
             .size(46px,46px);
+            opacity: 0.75;
+            -ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=75)"; /*IE 8 hack */
+            -webkit-transition: opacity 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
             &:hover{
-                background:url('/images/btn_fb_sobre.png') no-repeat;
+                opacity: 1.0;
+                -ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=100)"; /*IE 8 hack */
             }
         }
 
@@ -157,8 +161,9 @@ footer{
         padding-top:7px;
         padding-bottom: 7px;
         p{
-            font-family: 'Calibri';
-            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
             color:#FFF;
             text-align: left;
         }
