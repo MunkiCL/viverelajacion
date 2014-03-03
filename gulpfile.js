@@ -6,7 +6,6 @@ var gulp = require('gulp');
 // Load plugins
 var $ = require('gulp-load-plugins')();
 
-
 // Styles
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.less')
@@ -16,6 +15,17 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('app/styles/'))
         .pipe($.size());
 
+});
+
+gulp.task('stylesDist',function(){
+    // var context = $.rev.Context();
+    return gulp.src('app/styles/main.less')
+        .pipe($.less())
+        .pipe($.autoprefixer('last 1 version'))
+        .pipe($.csso())
+        // .pipe($.rev(context))
+        .pipe(gulp.dest('dist/styles/'))
+        .pipe($.size());
 });
 
 // Scripts
@@ -36,12 +46,15 @@ gulp.task('html', function () {
 
 // Images
 gulp.task('images', function () {
+    // var context = $.rev.Context();
     return gulp.src('app/images/**/*')
         .pipe($.cache($.imagemin({
-            optimizationLevel: 3,
+            optimizationLevel: 4,
             progressive: true,
             interlaced: true
         })))
+        // .pipe($.rev(context))
+        // .pipe(context.replace)
         .pipe(gulp.dest('dist/images'))
         .pipe($.size());
 });
@@ -52,7 +65,9 @@ gulp.task('clean', function () {
 });
 
 // Bundle
-gulp.task('bundle', ['styles', 'scripts'], $.bundle('./app/*.html'));
+gulp.task('bundle', ['stylesDist', 'scripts'], $.bundle('./app/*.html',{
+    minify:true
+}));
 
 // Build
 gulp.task('build', ['html', 'bundle', 'images']);

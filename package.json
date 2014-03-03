@@ -22,7 +22,13 @@
     "gulp-less": "",
     "gulp-csso": "",
     "gulp-livereload": "",
-    "bower":""
+    "bower":"",
+    "gulp-usemin":"",
+    "gulp-minify-css":"",
+    "gulp-minify-html":"",
+    "gulp-uglify":"",
+    "gulp-rev":"",
+    "gulp-changed":""
   },
   "engines": {
     "node": ">=0.10.5"
