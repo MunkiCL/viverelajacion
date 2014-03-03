@@ -11,23 +11,33 @@ body{
 //     }
 
 // }
-header{
-    height:123px;
-    position:relative;
-    .col-lg-2{
-        position:absolute;
-        top:0;
-        bottom:0;
-        left:0;
-        right: 0;
-        height: 50%;
-        margin:auto;
-    }
+// header{
+//     height:123px;
+//     position:relative;
+//     .col-lg-2{
+//         position:absolute;
+//         top:0;
+//         bottom:0;
+//         left:0;
+//         right: 0;
+//         height: 50%;
+//         margin:auto;
+//     }
+// }
+#header {
+    background-color: #fff;
+    background-image:url('/images/img_logo-header.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+    height: 123px;
+    padding: 10px 0px 30px;
 }
 
 #portada{
+    background-color: #0b7cab;
     background-image: url('/images/img_portada.jpg');
     background-repeat: no-repeat;
+    background-position: top center;
     height: 677px;
     width:100%;
     background-position: center;
@@ -70,22 +80,27 @@ header{
         }
     }
     #saludo{
-        height:300px;
-        width:768px;
+        // height:300px;
+        // width:768px;
+        margin: 150px 15% 0px 15%;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        text-align: center;
         background: rgb(11, 124, 171);
         background: rgba(11, 124, 171, .7);
-        position:absolute;
-        top:0;
-        bottom:0;
-        left:0;
-        right: 0;
-        margin:auto;
+        // position:absolute;
+        // top:0;
+        // bottom:0;
+        // left:0;
+        // right: 0;
+        // margin:auto;
         p.strong{
             font-family: 'Open Sans', sans-serif;
             font-weight: 800;
-            color:white;
-            font-size:40px;
+            color:#fff;
+            font-size:35px;
             text-align: center;
+            line-height: 1.0em;
         }
         p.light{
             font-family: 'Open Sans', sans-serif;
@@ -102,6 +117,9 @@ header{
                     text-decoration: none;
                 }
             }
+        }
+        #contenedor-contacto {
+            padding: 0px 10% 0px 10%;
         }
     }
 }
@@ -134,8 +152,9 @@ header{
                     color:rgb(11, 124, 171);
                     font-size:20px;
                     text-align: center;
-                    margin-bottom:25px;
-                    margin-top:50px;
+                    // margin-bottom:25px;
+                    // margin-top:50px;
+                    margin: 10px 0px 20px;
                 }
                 p{
                     font-family: 'Open Sans', sans-serif;
