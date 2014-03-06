@@ -1,1 +1,2 @@
-web: node web.js
+rails: rails s
+guard: bundle exec guard
