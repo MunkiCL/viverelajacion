@@ -62,16 +62,15 @@ end
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 gem 'less-rails'
+gem 'sass-rails'
+gem 'less-rails-bootstrap'
 
-group :assets do
-    gem 'rails-assets-bootstrap'
-    gem 'rails-assets-angular'
-    gem 'rails-assets-jquery'
-    # gem 'rails-assets-karma'
-    # gem 'rails-assets-karma-ng-scenario'
-    gem 'rails-assets-modernizr'
-    gem 'rails-assets-requirejs'
-end
+gem 'rails-assets-angular'
+gem 'rails-assets-jquery'
+gem 'rails-assets-karma'
+gem 'rails-assets-karma-ng-scenario'
+gem 'rails-assets-modernizr'
+gem 'rails-assets-requirejs'
 
 # gem 'activeadmin', github: 'gregbell/active_admin'
 # gem 'sass-rails'

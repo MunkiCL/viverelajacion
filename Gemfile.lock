@@ -95,6 +95,8 @@ GEM
     less-rails (2.4.2)
       actionpack (>= 3.1)
       less (~> 2.4.0)
+    less-rails-bootstrap (3.1.0.0)
+      less-rails (~> 2.4.2)
     libv8 (3.16.14.3)
     listen (2.7.0)
       celluloid (>= 0.15.2)
@@ -133,9 +135,9 @@ GEM
       railties (= 4.0.1)
       sprockets-rails (~> 2.0.0)
     rails-assets-angular (1.2.14)
-    rails-assets-bootstrap (3.1.1)
-      rails-assets-jquery (>= 1.9.0)
     rails-assets-jquery (2.1.0)
+    rails-assets-karma (0.2.1)
+    rails-assets-karma-ng-scenario (0.1.0)
     rails-assets-modernizr (2.7.2)
     rails-assets-requirejs (2.1.11)
     railties (4.0.1)
@@ -151,6 +153,11 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     ref (1.0.5)
+    sass (3.2.14)
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
@@ -204,17 +211,20 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  less-rails-bootstrap
   mysql2
   pg
   quiet_assets
   rack-livereload
   rails (= 4.0.1)
   rails-assets-angular
-  rails-assets-bootstrap
   rails-assets-jquery
+  rails-assets-karma
+  rails-assets-karma-ng-scenario
   rails-assets-modernizr
   rails-assets-requirejs
   rb-inotify
+  sass-rails
   sdoc
   sqlite3
   therubyracer

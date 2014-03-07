@@ -1,8 +1,8 @@
 /*
-*= require bootstrap
+*= require twitter/bootstrap
 *= require_self
 */
-
+@import "twitter/bootstrap/mixins.less";
 @primary_color:#0B7CAB;
 
 body{
@@ -71,9 +71,8 @@ p{
 }
 
 .btn-mas{
-    font-family: 'Open Sans',sans-serif;
     font-weight: 800;
-    font-size:20px;
+    font:20px 'Open Sans',sans-serif;
     color:#FFF;
     border:3px solid #fff;
     background:transparent;
@@ -82,22 +81,19 @@ p{
         color:@primary_color;
         background-color:#fff;
     }
-    //.border-top-radius(0);
-    //.border-bottom-radius(0);
+    border-radius: 0;
 }
 
 #portada{
     background-color: @primary_color;
     background-image: asset-url('img_portada.jpg');
     background-repeat: no-repeat;
-    height: 677px;
-    width:100%;
+    .size(100%,677px);
     background-position: center;
     background-size: cover;
     position:relative;
     #saludo{
-        width:550px;
-        height:290px;
+        .size(550px,290px);
         margin: 350px 15% 0px 10%;
         padding:35px 35px 35px 35px;
         background: rgb(11, 124, 171);
@@ -244,14 +240,18 @@ p{
         .btn-mas{
             width:100%;
         }
-        // input::-moz-placeholder, textarea::-moz-placeholder,
-        // input::-webkit-input-placeholder, textarea::-webkit-input-placeholder,
-        // input::-ms-input-placeholder, textarea::-ms-input-placeholder,
+
         input,textarea{
             font-family: 'Open Sans', sans-serif;
             font-style: italic;
             font-size:20px;
             color:#383838 ;
+            &:-moz-placeholder,&::-moz-placeholder,
+            &:-ms-input-placeholder &::-webkit-input-placeholder  {
+                font-family: 'Open Sans', sans-serif;
+                font-style: italic;
+                font-size:20px;
+            }
         }
         input{
             height: 50px;
@@ -261,8 +261,7 @@ p{
         }
     }
     #map-canvas{
-        height: 355px;
-        width:100%;
+        .size(100%,355px);
     }
 }
 
@@ -293,9 +292,7 @@ footer{
         .twitter{
             float:right;
             background:asset-url('btn_tw_normal.png') no-repeat;
-            //.size(46px,46px);
-            width:46px;
-            height:46px;
+            .square(46px);
             margin-right:7px;
             margin-top:10px;
             &:hover{
@@ -306,8 +303,7 @@ footer{
             margin-top:10px;
             float:right;
             background:asset-url('btn_fb_normal.png') no-repeat;
-            width:46px;
-            height:46px;
+            .square(46px);
             &:hover{
                 background:asset-url('btn_fb_sobre.png') no-repeat;
             }
