@@ -20,49 +20,37 @@
 </head>
 <body>
 	<header>
-		<!-- LOGO -->
-		<div class="row">
-			<div class="col-lg-2 col-lg-offset-1">
-				<%= image_tag 'img_logo-header.png' %>
-			</div>
-			<nav class="col-lg-7 col-lg-offset-1">
-				<ul>
-					<li >
-						<a href="/" title="Home" class="active">
-							Home |
-						</a>
-					</li>
-					<li>
-						<a href="/" title="Servicios" >
-							Servicios |
-						</a>
-					</li>
-					<li>
-						<a href="/" title="Equipo" >
-							Equipo |
-						</a>
-					</li>
-					<li>
-						<a href="/" title="Tips" >
-							Tips |
-						</a>
-					</li>
-					<li>
-						<a href="/" title="Store" >
-							Store |
-						</a>
-					</li>
-					<li>
-						<a href="/" title="Contacto" >
-							Contacto
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/"><%=image_tag 'img_logo-header.png' %></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="navbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home </a></li>
+                <li><a href="#">| Servicios </a></li>
+                <li><a href="#">| Equipo </a></li>
+                <li><a href="#">| Tips </a></li>
+                <li><a href="#">| Store </a></li>
+                <li><a href="#">| Contacto </a></li>
+              </ul>
+
+
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
 	</header>
 
-	<section>
+	<section id="content">
 		<%= yield %>
 	</section>
 	<footer>
@@ -97,6 +85,7 @@
 		</div>
 	</footer>
 
+    <%= javascript_include_tag "application" %>
 	<%= yield :javascript_extra %>
 </body>
 </html>

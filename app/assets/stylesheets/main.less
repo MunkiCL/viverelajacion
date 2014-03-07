@@ -23,33 +23,32 @@ body{
 header{
     background:#fff;
     height:123px;
-    position:relative;
-    padding: 10px 0px 30px;
-    nav{
-        top:20px;
-        ul{
-            display: block;
-            float:right;
-            li{
-                display: block;
-                float:left;
-                font-weight: 800;
-                font:18px  'Open Sans', sans-serif;
+    margin-bottom: 0 !important;
+    .navbar-default{
+        background:#fff;
+        border:0;
+        height:123px;
+    }
+    #navbar{
+        margin-top:30px;
+        li{
+            a{
+                font:18px/1.0em 'Open Sans', sans-serif;
+                font-weight: bold;
+                color:#7b7b7b;
                 text-transform: uppercase;
-                padding-right:10px;
+                padding-right: 0;
+            }
+            &.active{
                 a{
-                    display: block;
-                    color:#787878;
-                    &:hover,&:active,&.active{
-                        color:@primary_color;
-                        text-decoration: none;
-                    }
+                    color:@primary_color;
+                    background:#fff;
                 }
-
             }
         }
     }
 }
+
 
 p{
     font-family: 'Open Sans', sans-serif;
@@ -154,6 +153,7 @@ p{
 
     }
     .overlay{
+        display:none;
         position:absolute;
         left:0;
         top:0;

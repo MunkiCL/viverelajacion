@@ -219,5 +219,11 @@
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);
+        $('#servicios .background').on('mouseenter',function(e){
+            $('.overlay',this).slideDown();
+        });
+        $('#servicios .background').on('mouseleave',function(e){
+            $('.overlay',this).slideUp();
+        });
     </script>
 <% end %>
