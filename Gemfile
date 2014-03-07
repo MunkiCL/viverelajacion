@@ -72,6 +72,7 @@ gem 'rails-assets-karma-ng-scenario'
 gem 'rails-assets-modernizr'
 gem 'rails-assets-requirejs'
 
+gem 'rails_12factor', group: :production
 # gem 'activeadmin', github: 'gregbell/active_admin'
 # gem 'sass-rails'
 # gem 'meta_search'

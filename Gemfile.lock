@@ -140,6 +140,11 @@ GEM
     rails-assets-karma-ng-scenario (0.1.0)
     rails-assets-modernizr (2.7.2)
     rails-assets-requirejs (2.1.11)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.0.1)
       actionpack (= 4.0.1)
       activesupport (= 4.0.1)
@@ -223,6 +228,7 @@ DEPENDENCIES
   rails-assets-karma-ng-scenario
   rails-assets-modernizr
   rails-assets-requirejs
+  rails_12factor
   rb-inotify
   sass-rails
   sdoc
