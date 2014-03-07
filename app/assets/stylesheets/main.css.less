@@ -1,4 +1,7 @@
-@import '../../components/bootstrap/less/bootstrap.less';
+/*
+*= require bootstrap
+*= require_self
+*/
 
 @primary_color:#0B7CAB;
 
@@ -79,13 +82,13 @@ p{
         color:@primary_color;
         background-color:#fff;
     }
-    .border-top-radius(0);
-    .border-bottom-radius(0);
+    //.border-top-radius(0);
+    //.border-bottom-radius(0);
 }
 
 #portada{
     background-color: @primary_color;
-    background-image: url('/assets/img_portada.jpg');
+    background-image: asset-url('img_portada.jpg');
     background-repeat: no-repeat;
     height: 677px;
     width:100%;
@@ -160,18 +163,19 @@ p{
         top:0;
         right:0;
         bottom:0;
-        .size(100%,510px);
+        width:100%;
+        height:510px;
         background: rgb(11, 124, 171);
         background: rgba(11, 124, 171, .52);
     }
     #kine{
-        background-image:url('/assets/img_servicio-kine.png');
+        background-image:asset-url('img_servicio-kine.png');
     }
     #fisico{
-        background-image:url('/assets/img_servicio-fisico.png');
+        background-image:asset-url('img_servicio-fisico.png');
     }
     #masaje{
-        background-image:url('/assets/img_servicio-masaje.png');
+        background-image:asset-url('img_servicio-masaje.png');
     }
 }
 
@@ -288,21 +292,24 @@ footer{
 
         .twitter{
             float:right;
-            background:url('/assets/btn_tw_normal.png') no-repeat;
-            .size(46px,46px);
+            background:asset-url('btn_tw_normal.png') no-repeat;
+            //.size(46px,46px);
+            width:46px;
+            height:46px;
             margin-right:7px;
             margin-top:10px;
             &:hover{
-                background:url('/assets/btn_tw_sobre.png') no-repeat;
+                background:asset-url('btn_tw_sobre.png') no-repeat;
             }
         }
         .facebook{
             margin-top:10px;
             float:right;
-            background:url('/assets/btn_fb_normal.png') no-repeat;
-            .size(46px,46px);
+            background:asset-url('btn_fb_normal.png') no-repeat;
+            width:46px;
+            height:46px;
             &:hover{
-                background:url('/assets/btn_fb_sobre.png') no-repeat;
+                background:asset-url('btn_fb_sobre.png') no-repeat;
             }
         }
 

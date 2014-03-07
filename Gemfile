@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby "2.0.0"
@@ -13,9 +14,6 @@ gem 'pg', group: [:production]
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-gem 'less-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
@@ -40,7 +38,7 @@ end
 
 # Use unicorn as the app server
 gem 'unicorn'
-gem 'zeus'
+
 gem 'foreman'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -49,6 +47,7 @@ gem 'foreman'
 gem 'debugger', group: [:development, :test]
 
 group :development do
+  gem 'zeus'
   gem 'rack-livereload'
   gem 'guard-livereload', require: false
   # gem 'guard-less'
@@ -60,8 +59,20 @@ group :development do
   gem 'quiet_assets'
 end
 
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+gem 'less-rails'
 
+group :assets do
+    gem 'rails-assets-bootstrap'
+    gem 'rails-assets-angular'
+    gem 'rails-assets-jquery'
+    # gem 'rails-assets-karma'
+    # gem 'rails-assets-karma-ng-scenario'
+    gem 'rails-assets-modernizr'
+    gem 'rails-assets-requirejs'
+end
 
-# gem "activeadmin"
+# gem 'activeadmin', github: 'gregbell/active_admin'
 # gem 'sass-rails'
 # gem 'meta_search'
