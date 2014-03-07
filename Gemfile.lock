@@ -95,7 +95,7 @@ GEM
     less-rails (2.4.2)
       actionpack (>= 3.1)
       less (~> 2.4.0)
-    less-rails-bootstrap (3.1.0.0)
+    less-rails-bootstrap (3.1.1.0)
       less-rails (~> 2.4.2)
     libv8 (3.16.14.3)
     listen (2.7.0)
