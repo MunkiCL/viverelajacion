@@ -1,0 +1,146 @@
+// Place all the styles related to the service controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "twitter/bootstrap/mixins";
+
+/// SERVICIOS
+#portada-servicios{
+    div.title{
+        background-color:#73b7d0;
+    }
+    p.title{
+        padding-top:50px;
+        padding-bottom:50px;
+        margin-bottom:0;
+        color:#fff;
+        font-size:45px;
+    }
+
+    .foto{
+        background-image: asset-url('img_portada-servicios.jpg');
+        background-repeat: no-repeat;
+        .size(100%,680px);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #saludo{
+        .size(428px,220px);
+        margin: 250px 0 0 0;
+        padding:35px 0px 35px 0px;
+        background: rgb(0,0,0);
+        background: rgba(0,0,0, .7);
+
+        li{
+
+            list-style:none;
+            font-size:36px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            margin-bottom:0;
+            margin-top:0;
+
+            &.active{
+                a{
+                    color:#73b7d0;
+                }
+                &::before,&:before{
+                    color:#73b7d0;
+                    content:'>'
+                }
+            }
+            a{
+                color:#fff;
+                text-transform: uppercase;;
+                &:hover,&:active{
+                    color:#73b7d0;
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+
+}
+
+#service-type{
+    margin-top:80px;
+    margin-bottom:80px;
+    .title{
+        margin-bottom:35px;
+        font-size:40px;
+    }
+    p.light{
+        text-align:center;
+        font-size:25px;
+        color:#636363;
+    }
+}
+
+#service-images{
+    background-color:#F8F8F8;
+    margin-top:105px;
+    margin-bottom:60px;
+    .images{
+        .size(460px,auto);
+        margin-right:105px;
+        &.col-lg-offset-1{
+            margin-left:10.333% !important;
+        }
+        p.title{
+            font-size:25px;
+            text-align: left;
+            margin-top:10px;
+        }
+        p.subtitle{
+            font-family: 'Open Sans',sans-serif;
+            font-size:19px;
+            color:#636363;
+            font-weight: 700;
+            margin-bottom:10px;
+            text-align: left;
+        }
+        p.light{
+            font-size:19px;
+            color:#636363;
+            text-align: left;
+        }
+    }
+}
+
+#convenios{
+    padding-bottom: 60px;
+    background-color:#fff;
+    p.title{
+        margin-top:60px;
+        margin-bottom:60px;
+    }
+}
+
+#service_bottom{
+    background-color: #73B7D0;
+    p.title{
+        font-size:40px;
+        color:#fff;
+        a{
+            color:#fff;
+            text-decoration: none;
+        }
+    }
+
+    .left,.center,.right{
+        padding-top:50px;
+        padding-bottom: 50px;
+    }
+    .left{
+        border-right: 4px white solid;
+    }
+    .right{
+        border-left: 4px white solid;
+    }
+    .center{
+        margin-right: 31px;
+        margin-left: 31px;
+    }
+}
