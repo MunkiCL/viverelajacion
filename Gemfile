@@ -1,12 +1,15 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby "2.0.0"
 gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: [:test]
+gem "sqlite3", :platform => [:ruby, :mswin, :mingw],group: [:test]
+
+# for JRuby
+gem "jdbc-sqlite3", :platform => :jruby,group: [:test]
+
 
 
 
@@ -46,15 +49,16 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-gem 'debugger', group: [:development, :test]
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'debugger'
+end
 
 group :development do
-  gem 'zeus'
   gem 'rack-livereload'
+  gem 'guard'
+  gem 'guard-rspec'
   gem 'guard-livereload', require: false
-  # gem 'guard-less'
-  # gem 'guard-coffeescript'
   gem 'awesome_print'
   gem 'rb-inotify', :require => false # for OS X
   gem "better_errors"
@@ -69,14 +73,7 @@ gem 'less-rails'
 gem 'sass-rails'
 gem 'less-rails-bootstrap'
 
-gem 'rails-assets-angular'
-gem 'rails-assets-jquery'
-gem 'rails-assets-karma'
-gem 'rails-assets-karma-ng-scenario'
-gem 'rails-assets-modernizr'
-gem 'rails-assets-requirejs'
 gem 'travis'
 
 # gem 'activeadmin', github: 'gregbell/active_admin'
-# gem 'sass-rails'
 # gem 'meta_search'
