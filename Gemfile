@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby "2.0.0"
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", :platform => [:ruby, :mswin, :mingw],group: [:test]
@@ -22,14 +22,14 @@ gem 'therubyracer', platforms: :ruby
 gem 'yui-compressor'
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails','~>3.1.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-gem 'jquery-turbolinks'
+gem 'turbolinks', '>= 2.2.1'
+gem 'jquery-turbolinks','>= 2.0.2'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '>= 2.0.4'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -43,7 +43,7 @@ group :production do
     # Use unicorn as the app server
     gem 'unicorn'
     gem 'foreman'
-    gem 'rails_12factor'
+    gem 'rails_12factor','>=0.0.2'
     gem 'pg'
 end
 # Use Capistrano for deployment
@@ -63,15 +63,15 @@ group :development do
   gem 'rb-inotify', :require => false # for OS X
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'quiet_assets'
+  gem 'quiet_assets','>= 1.0.2'
   gem 'mysql2'
 end
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-gem 'less-rails'
-gem 'sass-rails'
-gem 'less-rails-bootstrap'
+gem 'coffee-rails', '>= 4.0.0'
+gem 'less-rails', '>=  2.4.2'
+gem 'sass-rails','>= 4.0.1'
+gem 'less-rails-bootstrap', '>=3.1.1.0'
 
 gem 'travis'
 

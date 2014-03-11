@@ -1,3 +1,4 @@
 == Sitio web ViveRelajacion
-[![Code Climate](https://codeclimate.com/github/MunkiCL/viverelajacion.png)](https://codeclimate.com/github/MunkiCL/viverelajacion)
-[![Build Status](https://travis-ci.org/MunkiCL/viverelajacion.png?branch=master)](https://travis-ci.org/MunkiCL/viverelajacion)
+{<img src="https://codeclimate.com/github/MunkiCL/viverelajacion.png" />}[https://codeclimate.com/github/MunkiCL/viverelajacion]
+{<img src="https://travis-ci.org/MunkiCL/viverelajacion.png?branch=master" alt="Build Status" />}[https://travis-ci.org/MunkiCL/viverelajacion]
+{<img src="https://gemnasium.com/MunkiCL/viverelajacion.png" alt="Dependency Status" />}[https://gemnasium.com/MunkiCL/viverelajacion]
