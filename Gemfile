@@ -75,7 +75,7 @@ gem 'rails-assets-karma'
 gem 'rails-assets-karma-ng-scenario'
 gem 'rails-assets-modernizr'
 gem 'rails-assets-requirejs'
-
+gem 'travis'
 
 # gem 'activeadmin', github: 'gregbell/active_admin'
 # gem 'sass-rails'

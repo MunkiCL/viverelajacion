@@ -1,5 +1,10 @@
 language: ruby
 rvm:
-    - 2.0.0p247
-bundler_args: --without production
+- 2.0.0p247
+bundler_args: "--without production"
 cache: bundler
+deploy:
+  app: viverelajacion
+  provider: heroku
+  api_key:
+    secure: iWTWWUxrQwq71ki/IcVogATalV6g0znPrMCY/scXvtr8u/Z3PHphbXVDugiIUoPAL3ksRJkO02Sf42zsyWbRg2BTXB9FHAjwbD3wXw3+aLWrAPrp7fRNRbSHT3iHoQtiofzrc8MI+hFVnmzlqKc2AKn3b2Mm9AS1YInnQ+pSXgQ=
