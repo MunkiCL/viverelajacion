@@ -7,8 +7,7 @@ gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: [:test]
-gem 'mysql2', group: [:development]
-gem 'pg', group: [:production]
+
 
 
 # Use Uglifier as compressor for JavaScript assets
@@ -37,10 +36,13 @@ end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
-# Use unicorn as the app server
-gem 'unicorn'
-
-gem 'foreman'
+group :production do
+    # Use unicorn as the app server
+    gem 'unicorn'
+    gem 'foreman'
+    gem 'rails_12factor'
+    gem 'pg'
+end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
@@ -58,6 +60,7 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'quiet_assets'
+  gem 'mysql2'
 end
 
 # Use CoffeeScript for .js.coffee assets and views
@@ -73,7 +76,7 @@ gem 'rails-assets-karma-ng-scenario'
 gem 'rails-assets-modernizr'
 gem 'rails-assets-requirejs'
 
-gem 'rails_12factor', group: :production
+
 # gem 'activeadmin', github: 'gregbell/active_admin'
 # gem 'sass-rails'
 # gem 'meta_search'
