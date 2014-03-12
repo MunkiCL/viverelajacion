@@ -65,6 +65,8 @@ group :development do
   gem "binding_of_caller"
   gem 'quiet_assets','>= 1.0.2'
   gem 'mysql2'
+  gem 'terminal-notifier-guard'
+  gem 'capybara','>=2.2.0'
 end
 
 # Use CoffeeScript for .js.coffee assets and views

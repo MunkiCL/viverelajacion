@@ -13,11 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140312013859) do
 
-  create_table "comments", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "tips", force: true do |t|
     t.string   "titulo"
     t.string   "image"
