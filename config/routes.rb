@@ -1,9 +1,10 @@
 Viverelajacion::Application.routes.draw do
 
+  resources :tips
+
   get 'store',to: 'store#index'
   get 'equipo',to: 'equipo#index'
-  # get "store/index"
-  # get "equipo/index"
+
 
   get "service/index"
   get "service/kine"

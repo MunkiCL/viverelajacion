@@ -1,13 +1,18 @@
 language: ruby
 rvm:
-- 2.0.0-p247
+  - 2.0.0
 bundler_args: "--without production"
 cache: bundler
-script: bundle exec rspec
-services:
-- sqlite3
+script: 
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec
 notifications:
-  email: false
+  email:
+    recipients:
+      - matias@munki.cl
+    on_success:change
+    on_failure: change
 deploy:
   provider: heroku
   api_key:

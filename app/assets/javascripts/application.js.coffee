@@ -9,10 +9,10 @@
 Turbolinks.enableTransitionCache();
 
 startSpinner = ->
-	console.log('Spinner')
+	$('.loading-overlay').fadeIn('fast')
 
 stopSpinner = ->
-	console.log('Stop Spinner')
+	$('.loading-overlay').fadeOut()
 
 $(document).on 'page:fetch', startSpinner
 $(document).on 'page:receive', stopSpinner
@@ -31,6 +31,11 @@ $(document).ready  ->
 
 	# #For Home
 	if $('#map-canvas').length > 0
+		script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = '//maps.google.com/maps/api/js?v=3.9&sensor=false';
+		document.body.appendChild(script);
+
 		mapOptions =
 			zoom:14,
 			center:new google.maps.LatLng(-35.423238,-71.668324),
@@ -49,11 +54,11 @@ $(document).ready  ->
 			if data?
 				$(a).attr('href',data).attr('data-href',href)
 
-    # For Services
-    if window.location.pathname.indexOf('service') >= 1
-        active = window.location.pathname.replace('service','').replace(/\//gi,'')
-        $('#salida li').removeClass('active')
-        $('#'+active).addClass('active')
+	# For Services
+	if window.location.pathname.indexOf('service') >= 1
+		active = window.location.pathname.replace('service','').replace(/\//gi,'')
+		$('#salida li').removeClass('active')
+		$('#'+active).addClass('active')
 
 
 
