@@ -11,7 +11,7 @@ notifications:
   email:
     recipients:
       - matias@munki.cl
-    on_success:change
+    on_success: change
     on_failure: change
 deploy:
   provider: heroku
