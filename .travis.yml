@@ -9,7 +9,7 @@ script:
   - bundle exec rspec
 notifications:
   email:
-    recipientes:
+    recipients:
       - matias@munki.cl
     on_success:change
     on_failure: change
