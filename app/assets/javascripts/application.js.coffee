@@ -17,6 +17,25 @@ stopSpinner = ->
 $(document).on 'page:fetch', startSpinner
 $(document).on 'page:receive', stopSpinner
 
+window.initializeMap= ->
+	center = new google.maps.LatLng(-35.423238,-71.668324)
+	mapOptions =
+		zoom:14,
+		center:center
+	map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+
+	marker = new google.maps.Marker
+		map: map
+		position: center
+
+loadGoogleMapsScript = ->
+	script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = '//maps.google.com/maps/api/js?v=3.9&sensor=false&callback=initializeMap';
+	script.async = true
+	script.id    = 'google_maps_scripts'
+
+	document.body.appendChild(script);
 
 $(document).ready  ->
 	$("a[href*=#]:not([href=#])").click ->
@@ -29,17 +48,26 @@ $(document).ready  ->
 				, 1000
 				false
 
+	#For navigation links
+	path = window.location.pathname.toLowerCase().split('/')[1]
+	switch path
+		when "" then active = "home"
+		else active = path
+	$('#navbar li').removeClass('active')
+	$("#navbar li.#{active}").addClass('active')
+
 	# #For Home
 	if $('#map-canvas').length > 0
-		script = document.createElement('script');
-		script.type = 'text/javascript';
-		script.src = '//maps.google.com/maps/api/js?v=3.9&sensor=false';
-		document.body.appendChild(script);
 
-		mapOptions =
-			zoom:14,
-			center:new google.maps.LatLng(-35.423238,-71.668324),
-		map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+		try
+			if typeof google != 'object' and typeof google.maps != 'object'
+				loadGoogleMapsScript()
+			else
+				initializeMap()
+		catch
+			loadGoogleMapsScript()
+
+
 		$('#servicios .background').on 'mouseenter', ->
 			$('.overlay',this).fadeIn(500)
 
