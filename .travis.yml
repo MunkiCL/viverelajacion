@@ -3,7 +3,7 @@ rvm:
   - 2.0.0
 bundler_args: "--without production"
 cache: bundler
-script: 
+script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec
@@ -18,5 +18,4 @@ deploy:
   api_key:
     secure: ZuzlPdywL93isJMDzAcSumEWfCgNQ/aCCaUwLgwXrmQzLhOIAkJtN8VZCVAm1MPhvSNubS6It1FLyxUwfY5FiTmkUQxr7Ql5vvfOIFWj8W2fysw65PdmjajDJSK+o+fxUIeWlqH690cfYG7gx5BWTM1qrMA3I/ETPcpG2x76+m4=
   app: viverelajacion
-  on:
-    repo: MunkiCL/viverelajacion
+
