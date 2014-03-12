@@ -38,12 +38,12 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-right" id="navbar">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#portada" data-href="/" data-no-turbolink>Home </a></li>
+							<li class="active"><a href="#portada" data-href="/" >Home </a></li>
 							<li><a href="#service_anchor" data-href="/service/kine">| Servicios </a></li>
 							<li><a href="/equipo">| Equipo </a></li>
 							<li><a href="#tips" data-href="/tips">| Tips </a></li>
 							<li><a href="#promociones" data-href="/store">| Store </a></li>
-							<li><a href="#contacto" data-href="/#contacto" data-no-turbolink>| Contacto </a></li>
+							<li><a href="#contacto" data-href="/#contacto" >| Contacto </a></li>
 						</ul>
 
 
@@ -55,6 +55,13 @@
 		<section id="content">
 			<%= yield %>
 		</section>
+
+        <div class="loading-overlay">
+            <div class="loading">
+                <%= image_tag 'loading.gif', size: '100x100' %>
+                <p>Cargando...</p>
+            </div>
+        </div>
 		<footer>
 
 			<div class="row" id="footer1">
