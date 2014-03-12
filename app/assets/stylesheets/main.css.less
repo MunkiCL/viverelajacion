@@ -1,10 +1,9 @@
 /*
+*= require_tree .
 *= require twitter/bootstrap
 *= require_self
-*= require_tree
 */
 @import "twitter/bootstrap/mixins.less";
-@primary_color:#0B7CAB;
 
 body{
     background:#f8f8f8;
@@ -40,13 +39,13 @@ header{
                 text-transform: uppercase;
                 padding-right: 0;
                 &:hover,&.active{
-                    color:@primary_color;
+                    color:#0B7CAB;
                     background:#fff;
                 }
             }
             &.active{
                 a{
-                    color:@primary_color;
+                    color:#0B7CAB;
                     background:#fff;
                 }
             }
@@ -67,7 +66,7 @@ p{
     &.title{
         font:30px/1.0em 'Open Sans', sans-serif;
         font-weight: 800;
-        color:@primary_color;
+        color:#0B7CAB;
         text-align:center;
         margin-bottom:35px;
         text-transform: uppercase;
@@ -83,7 +82,7 @@ p{
     background:transparent;
     background-image: none;
     &:hover,&:active{
-        color:@primary_color;
+        color:#0B7CAB;
         background-color:#fff;
     }
     border-radius: 0;
@@ -91,7 +90,7 @@ p{
 }
 
 #portada{
-    background-color: @primary_color;
+    background-color: #0B7CAB;
     background-image: asset-url('img_portada.jpg');
     background-repeat: no-repeat;
     .size(100%,677px);
@@ -183,7 +182,7 @@ p{
 }
 
 #promociones{
-    background:@primary_color;
+    background:#0B7CAB;
     padding-bottom:60px;
     margin-bottom:60px;
 
@@ -226,13 +225,13 @@ p{
         margin-top:60px;
         &:hover,&:active{
             color:#fff;
-            background-color:@primary_color;
+            background-color:#0B7CAB;
         }
     }
 }
 
 #contacto{
-    background:@primary_color;
+    background:#0B7CAB;
     padding-bottom:60px;
     p.title{
         color:#fff;
@@ -274,6 +273,7 @@ p{
 
 footer{
     #footer1{
+
         background-color:#004A68;
         height:116px;
         padding-top: 19px;
