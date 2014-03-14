@@ -9,113 +9,44 @@
 <div class="row" id="tips-list">
     <div class="container">
         <div class="col-lg-12">
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2 images">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <a href="/tips/1/">
-                                <%= image_tag  'img_tip-1.png', size:"200x200", class:"left" %>
-                            </a>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="col-lg-12 no-margin-bottom"><p class="day">12</p></div>
-                            <div class="col-lg-12 no-margin-top"><p class="month">Agosto</p></div>
-                            <div class="col-lg-12">
-                                <div class="share fb"></div>
-                                <div class="share pn"></div>
-                                <div class="share tw"></div>
+            <% @tips.each_slice(2) do |slice| %>
+                <div class="row">
+                <% slice.each_with_index do |item,idx| %>
+                    <% if(idx == 0) %>
+                    <div class="col-lg-4 col-lg-offset-2 images">
+                    <% else %>
+                    <div class="col-lg-4 images">
+                    <% end %>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="<%= tip_url(item) %>">
+                                    <%= image_tag item.portada.url(:small), size:"200x200", class:"left" %>
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="col-lg-12 no-margin-bottom"><p class="day"><%= item.created_at.strftime('%d') %></p></div>
+                                <div class="col-lg-12 no-margin-top"><p class="month"><%= item.created_at.strftime('%B') %></p></div>
+                                <div class="col-lg-12">
+                                    <div class="share fb" data-url="<%= tip_url(item) %>"></div>
+                                    <div class="share pn" data-url="<%= tip_url(item) %>"></div>
+                                    <div class="share tw" data-url="<%= tip_url(item) %>"></div>
+                                </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <p class="title">
+                                <a href="<%= tip_url(item) %>"><%= item.titulo %></a>
+                            </p>
+                            <p class="light">
+                                <%= truncate(raw(item.texto),:length => 200,:omision => '...',:escape => false   ) %>
+                            </p>
+                        </div>
                     </div>
-                    <div class="row">
-                        <p class="title">
-                            <a href="/tips/1">Lorem ipsum dolor sit</a>
-                        </p>
-                        <p class="light">
-                            Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                        </p>
-                    </div>
-
-
+                <% end -%>
                 </div>
-
-                <div class="col-lg-4 images">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <%= image_tag  'img_tip-2.png', size:"200x200", class:"left" %>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="col-lg-12 no-margin-bottom"><p class="day">12</p></div>
-                            <div class="col-lg-12 no-margin-top"><p class="month">Agosto</p></div>
-                            <div class="col-lg-12">
-                                <div class="share fb"></div>
-                                <div class="share pn"></div>
-                                <div class="share tw"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p class="title">Lorem ipsum dolor sit</p>
-                        <p class="light">
-                            Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                        </p>
-                    </div>
+            <% end -%>
 
 
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2 images">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <%= image_tag  'img_tip-3.png', size:"200x200", class:"left" %>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="col-lg-12 no-margin-bottom"><p class="day">12</p></div>
-                            <div class="col-lg-12 no-margin-top"><p class="month">Agosto</p></div>
-                            <div class="col-lg-12">
-                                <div class="share fb"></div>
-                                <div class="share pn"></div>
-                                <div class="share tw"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p class="title">Lorem ipsum dolor sit</p>
-                        <p class="light">
-                            Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                        </p>
-                    </div>
-
-
-                </div>
-
-                <div class="col-lg-4 images">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <%= image_tag  'img_tip-4.png', size:"200x200", class:"left" %>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="col-lg-12 no-margin-bottom"><p class="day">12</p></div>
-                            <div class="col-lg-12 no-margin-top"><p class="month">Agosto</p></div>
-                            <div class="col-lg-12">
-                                <div class="share fb"></div>
-                                <div class="share pn"></div>
-                                <div class="share tw"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p class="title">Lorem ipsum dolor sit</p>
-                        <p class="light">
-                            Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                        </p>
-                    </div>
-
-
-                </div>
-            </div>
 
         </div>
     </div>

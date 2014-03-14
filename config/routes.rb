@@ -1,5 +1,10 @@
 Viverelajacion::Application.routes.draw do
 
+  resources :productos
+
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :tips
 
   get 'store',to: 'store#index'

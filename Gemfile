@@ -52,6 +52,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'debugger'
+  gem "factory_girl_rails"
 end
 
 group :development do
@@ -59,14 +60,16 @@ group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-livereload', require: false
-  gem 'awesome_print'
   gem 'rb-inotify', :require => false # for OS X
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'quiet_assets','>= 1.0.2'
   gem 'mysql2'
   gem 'terminal-notifier-guard'
-  gem 'capybara','>=2.2.0'
+end
+
+group :test do
+    gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+    gem "database_cleaner"
 end
 
 # Use CoffeeScript for .js.coffee assets and views
@@ -75,7 +78,8 @@ gem 'less-rails', '>=  2.4.2'
 gem 'sass-rails','>= 4.0.1'
 gem 'less-rails-bootstrap', '>=3.1.1.0'
 
-gem 'travis'
 
-# gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'tinymce-rails'
+gem 'paperclip', '>= 4.1.1'
 # gem 'meta_search'
