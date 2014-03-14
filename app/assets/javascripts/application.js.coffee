@@ -1,7 +1,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require twitter/bootstrap
+//= require twitter/bootstrap/carousel
 //= require turbolinks
 //= require_self
 

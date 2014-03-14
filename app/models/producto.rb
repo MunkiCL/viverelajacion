@@ -4,7 +4,7 @@ class Producto < ActiveRecord::Base
     validates_attachment_presence :imagen
 
 
-    def self.by_type(type)
-        self.all(:conditions => ["type = ?", type])
+    def self.by_type(clase)
+        self.all(:conditions => ["clase = ?", clase])
     end
 end

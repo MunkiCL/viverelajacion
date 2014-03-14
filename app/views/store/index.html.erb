@@ -12,10 +12,10 @@
     </div>
     <div class="container">
         <div class="col-lg-12">
-            <% @productos_kinesiología.each_slice(3) do |slice| %>
+            <% @productos_kinesiologia.each_slice(3) do |slice| %>
                 <div class="row">
                     <% slice.each_with_index do |item,idx| %>
-                        <% if(idex == 0) %>
+                        <% if(idx == 0) %>
                             <div class="col-lg-3 col-lg-offset-1 images">
 
                         <% else %>
@@ -38,78 +38,71 @@
 </div>
 
 
-<div class="row" id="store-masaje">
+<div class="row" id="store-kine">
     <div class="col-lg-12 col-xs-12 title">
         <p class="title">Masaje</p>
     </div>
     <div class="container">
         <div class="col-lg-12">
-            <div class="row">
-                <div class="col-lg-3 col-lg-offset-1 images">
-                    <%= image_tag  'img_store_kine-1.jpg' %>
-                    <p class="title">Cinta</p>
-                    <p class="light">
-                        Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                    </p>
+            <% @productos_masaje.each_slice(3) do |slice| %>
+                <div class="row">
+                    <% slice.each_with_index do |item,idx| %>
+                        <% if(idx == 0) %>
+                            <div class="col-lg-3 col-lg-offset-1 images">
+
+                        <% else %>
+                            <div class="col-lg-3 images">
+                        <% end %>
+                                <%= image_tag  item.imagen.url(:samll) %>
+                                <p class="title"><%= item.nombre %></p>
+                                <p class="light">
+                                    <%= raw(item.descripcion) %>
+                                </p>
+                            </div>
+                    <% end %>
                 </div>
-                <div class="col-lg-3 images">
-                    <%= image_tag  'img_store_kine-2.jpg' %>
-                    <p class="title">Cinta</p>
-                    <p class="light">
-                        Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                    </p>
-                </div>
-                <div class="col-lg-3 images">
-                    <%= image_tag  'img_store_kine-3.jpg' %>
-                    <p class="title">MaCinta</p>
-                    <p class="light">
-                        Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                    </p>
-                </div>
-            </div>
+            <% end %>
 
         </div>
     </div>
+
+
 </div>
 
-<div class="row" id="store-fisico">
+<div class="row" id="store-kine">
     <div class="col-lg-12 col-xs-12 title">
-        <p class="title">Actividad Física y salud</p>
+        <p class="title">Actividad Física y Salud</p>
     </div>
     <div class="container">
         <div class="col-lg-12">
-            <div class="row">
-                <div class="col-lg-3 col-lg-offset-1 images">
-                    <%= image_tag  'img_store_fisico-1.jpg' %>
-                    <p class="title">José Lara</p>
-                    <p class="light">
-                        Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                    </p>
+            <% @productos_actividad.each_slice(3) do |slice| %>
+                <div class="row">
+                    <% slice.each_with_index do |item,idx| %>
+                        <% if(idx == 0) %>
+                            <div class="col-lg-3 col-lg-offset-1 images">
+
+                        <% else %>
+                            <div class="col-lg-3 images">
+                        <% end %>
+                                <%= image_tag  item.imagen.url(:samll) %>
+                                <p class="title"><%= item.nombre %></p>
+                                <p class="light">
+                                    <%= raw(item.descripcion) %>
+                                </p>
+                            </div>
+                    <% end %>
                 </div>
-                <div class="col-lg-3 images">
-                    <%= image_tag  'img_store_fisico-2.jpg' %>
-                    <p class="title">Juan Soto</p>
-                    <p class="light">
-                        Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                    </p>
-                </div>
-                <div class="col-lg-3 images">
-                    <%= image_tag  'img_store_fisico-3.jpg' %>
-                    <p class="title">María Osses</p>
-                    <p class="light">
-                        Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar
-                    </p>
-                </div>
-            </div>
+            <% end %>
 
         </div>
     </div>
+
 
 </div>
 
 <div class="row" id="team_bottom">
     <div class="container">
-        <div class="col-lg-1 col-lg-offset-5">
+        <div class="col-lg-12">
             <center>
                 <a href="/"><%= image_tag 'btn_home.png' %></a>
             </center>

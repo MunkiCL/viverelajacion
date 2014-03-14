@@ -7,6 +7,7 @@
 
 body{
     background:#f8f8f8;
+    overflow-x: hidden;
 }
 
 .loading-overlay{
@@ -44,6 +45,7 @@ body{
 .no-margin-top{
     margin-top:0px !important;
 }
+
 header{
     background:#fff;
     height:123px;
@@ -81,6 +83,7 @@ header{
 
 p{
     font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
     &.light{
         font-weight: 300;
     }
@@ -96,6 +99,15 @@ p{
         margin-bottom:35px;
         text-transform: uppercase;
     }
+    a{
+        color:inherit;
+        text-decoration:none;
+        &:hover{
+            text-decoration:none;
+            background-color:transparent;
+            color:inherit;
+        }
+    }
 }
 
 .btn-mas{
@@ -106,9 +118,11 @@ p{
     border:3px solid #fff;
     background:transparent;
     background-image: none;
+    text-decoration: none;
     &:hover,&:active{
         color:#0B7CAB;
         background-color:#fff;
+        text-decoration: none;
     }
     border-radius: 0;
     text-transform: uppercase;
@@ -215,6 +229,10 @@ p{
         color:#fff;
         margin-top:60px;
         margin-bottom: 50px;
+        a{
+            color:#fff;
+            text-decoration: none;
+        }
         &.light{
             font-size:40px;
             text-transform: none;
@@ -225,9 +243,10 @@ p{
             font-weight: 800;
         }
     }
-    p.content{
+    .content{
         font-size:18px;
         color:#fff;
+
     }
 }
 
@@ -241,6 +260,8 @@ p{
             text-decoration: none;
             &:hover{
                 color:inherit;
+                text-decoration: none;
+                background:transparent;
             }
         }
     }
@@ -256,6 +277,7 @@ p{
         border-color:#007bac;
         color:#007bac;
         margin-top:60px;
+        text-decoration: none;
         &:hover,&:active{
             color:#fff;
             background-color:#0B7CAB;
@@ -281,6 +303,7 @@ p{
         }
 
         input,textarea{
+            width: 100%;
             font-family: 'Open Sans', sans-serif;
             font-style: italic;
             font-size:20px;
