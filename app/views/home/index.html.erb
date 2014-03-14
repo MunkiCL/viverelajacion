@@ -129,7 +129,7 @@
         <p class="title">ALGUNOS TIPS</p>
         <% @tips.each_slice(2) do |slice| %>
             <div class="row" id="first-tips">
-            <% slice.each_with_inddex do |item,idx| %>
+            <% slice.each_with_index do |item,idx| %>
                 <% if(idx==0) %>
                 <div class="col-lg-5 col-lg-offset-1">
                 <% else %>

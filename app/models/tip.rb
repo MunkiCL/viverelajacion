@@ -1,4 +1,4 @@
-class Tip < ActiveRecord::Base
+class Tip < BaseModel
     has_attached_file :portada,
         :styles => { :small => "200x200>", :large => "940x350>" },
         :default_url => "/images/:style/missing.png"
