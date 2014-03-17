@@ -19,7 +19,7 @@ describe Producto do
     p4 = FactoryGirl.create(:producto)
     p = Producto.promociones
     expect(p.count).to be(3)
-    expect(p).to be([p1,p2,p3])
+    expect(p).to eq([p1,p2,p3])
   end
 
   it 'should return by class' do
@@ -29,6 +29,6 @@ describe Producto do
     p4 = FactoryGirl.create(:producto)
     p = Producto.by_type('kinesiologia')
     expect(p.count).to be(3)
-    expect(p).to be([p1,p2,p3])
+    expect(p).to eq([p1,p2,p3])
   end
 end
