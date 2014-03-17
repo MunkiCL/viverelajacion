@@ -22,6 +22,6 @@ deploy:
   strategy: git
 env:
   MANDRILL_API_KEY:
-    - secure: DJrODMhKPJYeU1OpHhQpCMZ/AW359AOYRsGxtdvggZRK1toYcPE+59Pjz22J/Gl4BvuttPT359oRK1svofhDHNqfOTsk2gccqz153FEEnzx6KRimDH/kGuVFqAeT64eJ6WObke4cufpOmuURyPuHXSwbLlw4Rz4KIjEZkSwljG4=
+    - secure: "QLJKc43k4zLYFqBABH1P57T8P0G43mAKzrRmo0TYPceTZahglaLlyXTzg18SOBFzzkRrLeizzlqwv7JNff7soQ0EhOYppBBtQbwB5JN1E3mKYCr+FzvmsNiTkbeg9Mwfdaw4T22KAZVEVgRYSbYr9t2Dtk7nPwsDb9NzytdqyJg="
   MANDRILL_USERNAME: apps@munki.cl
   REDISTOGO_URL: "redis://redistogo:48f69b364c0e09e5eb91baca4846bf2b@grideye.redistogo.com:9726/"
