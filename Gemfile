@@ -46,11 +46,16 @@ group :production do
   gem 'rails_12factor','>=0.0.2'
   gem 'pg'
 end
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'tinymce-rails'
+gem 'paperclip', '>= 4.1.1'
+gem 'pony'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem "rspec-sidekiq"
   gem 'debugger'
   gem "factory_girl_rails"
 end
@@ -70,7 +75,7 @@ end
 group :test do
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem "database_cleaner"
-  gem "rspec-sidekiq"
+
 end
 
 # Use CoffeeScript for .js.coffee assets and views
@@ -80,9 +85,5 @@ gem 'sass-rails','>= 4.0.1'
 gem 'less-rails-bootstrap', '>=3.1.1.0'
 
 
-gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'tinymce-rails'
-gem 'paperclip', '>= 4.1.1'
-gem 'pony'
-gem 'sidekiq'
+
 # gem 'meta_search'
