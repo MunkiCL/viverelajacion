@@ -4,5 +4,6 @@ class HomeController < ApplicationController
     @productos = Producto.by_creation.last
     @tips      = Tip.by_creation.limit(4)
     @promociones = Producto.promociones.limit(4)
+    @message   = Message.new
   end
 end

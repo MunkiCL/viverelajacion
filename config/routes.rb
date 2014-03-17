@@ -1,7 +1,7 @@
 Viverelajacion::Application.routes.draw do
 
   resources :productos
-
+  resources :messages, :only => [:new, :create]
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

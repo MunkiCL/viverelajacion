@@ -20,4 +20,8 @@ deploy:
   app: viverelajacion
   run: "rake db:migrate"
   strategy: git
-
+env:
+  MANDRILL_API_KEY:
+    - secure: DJrODMhKPJYeU1OpHhQpCMZ/AW359AOYRsGxtdvggZRK1toYcPE+59Pjz22J/Gl4BvuttPT359oRK1svofhDHNqfOTsk2gccqz153FEEnzx6KRimDH/kGuVFqAeT64eJ6WObke4cufpOmuURyPuHXSwbLlw4Rz4KIjEZkSwljG4=
+  MANDRILL_USERNAME: apps@munki.cl
+  REDISTOGO_URL: redis://redistogo:48f69b364c0e09e5eb91baca4846bf2b@grideye.redistogo.com:9726/

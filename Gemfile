@@ -38,13 +38,13 @@ end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
-
+gem 'unicorn'
 group :production do
-    # Use unicorn as the app server
-    gem 'unicorn'
-    gem 'foreman'
-    gem 'rails_12factor','>=0.0.2'
-    gem 'pg'
+  # Use unicorn as the app server
+
+  gem 'foreman'
+  gem 'rails_12factor','>=0.0.2'
+  gem 'pg'
 end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -68,8 +68,9 @@ group :development do
 end
 
 group :test do
-    gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
-    gem "database_cleaner"
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  gem "database_cleaner"
+  gem "rspec-sidekiq"
 end
 
 # Use CoffeeScript for .js.coffee assets and views
@@ -82,4 +83,6 @@ gem 'less-rails-bootstrap', '>=3.1.1.0'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'tinymce-rails'
 gem 'paperclip', '>= 4.1.1'
+gem 'pony'
+gem 'sidekiq'
 # gem 'meta_search'

@@ -2,6 +2,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap/carousel
+//= require twitter/bootstrap/alert
 //= require turbolinks
 //= require_self
 
