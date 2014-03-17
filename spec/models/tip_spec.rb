@@ -1,6 +1,15 @@
 require 'spec_helper'
 
 describe Tip do
+  it 'should create a new valid tip' do
+    t = FactoryGirl.build(:tip)
+    expect(t).to be_valid
+  end
+
+  it 'should require portada' do
+    t = FactoryGirl.build(:tip,portada: nil)
+    expect(t).not_to be_valid
+  end
   it 'Should return last tip' do
     tip1 = FactoryGirl.create(:tip)
     tip2 = FactoryGirl.create(:tip)

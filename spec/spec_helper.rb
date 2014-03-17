@@ -18,7 +18,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
-ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+# ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
   # ## Mock Framework
@@ -46,14 +46,14 @@ RSpec.configure do |config|
   config.include Capybara::DSL
 
   config.before(:suite) do
-      DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.strategy = :truncation
   end
 
   config.before(:each) do
-      DatabaseCleaner.start
+    DatabaseCleaner.start
   end
 
   config.after(:each) do
-      DatabaseCleaner.clean
+    DatabaseCleaner.clean
   end
 end

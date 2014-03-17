@@ -38,10 +38,10 @@ end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
-gem 'unicorn'
+
 group :production do
   # Use unicorn as the app server
-
+  gem 'unicorn'
   gem 'foreman'
   gem 'rails_12factor','>=0.0.2'
   gem 'pg'
@@ -58,6 +58,7 @@ group :development, :test do
   gem "rspec-sidekiq"
   gem 'debugger'
   gem "factory_girl_rails"
+  gem "faker"
 end
 
 group :development do
