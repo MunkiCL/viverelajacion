@@ -15,20 +15,20 @@ describe "Home View" do
     expect(page).to have_content(tip2.titulo)
   end
 
-  # it 'Send email' do
-  #   visit root_url
-  #   fill_in 'Nombre', with: 'Nombre de prueba'
-  #   fill_in 'Email', with: 'email@prueba.cl'
-  #   fill_in 'Mensaje', with: 'mensaje de prueba'
-  #   click_button 'Enviar'
-  #   expect(MailWorker).to have(1).jobs
-  #   expect{
-  #     # forces the execution of all enqueued jobs in this queue
-  #     MailWorker.drain
-  #   }.to change{Sidekiq::Extensions::DelayedMailer.jobs.size}.by 1
+  it 'Send email' do
+    visit root_url
+    fill_in 'Nombre', with: 'Nombre de prueba'
+    fill_in 'Email', with: 'email@prueba.cl'
+    fill_in 'Mensaje', with: 'mensaje de prueba'
+    click_button 'Enviar'
+    expect(MailWorker).to have(1).jobs
+    expect{
+      # forces the execution of all enqueued jobs in this queue
+      MailWorker.drain
+    }.to change{Sidekiq::Extensions::DelayedMailer.jobs.size}.by 1
 
-  #   expect{
-  #     Sidekiq::Extensions::DelayedMailer.drain
-  #   }.to change{ActionMailer::Base.deliveries.count}.by 5
-  # end
+    expect{
+      Sidekiq::Extensions::DelayedMailer.drain
+    }.to change{ActionMailer::Base.deliveries.count}.by 5
+  end
 end

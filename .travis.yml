@@ -21,4 +21,7 @@ deploy:
   run: "rake db:migrate"
   strategy: git
 env:
+  MANDRILL_API_KEY:
+    secure: "NzKLUcY85cyfKhvwnF08V6gqeRD2WHXgW2cvEKVNW+WXbrNRXACHeVwGrJwVqD3HIAL+C82jooxeaynZTY+tnJlOu7S2Qck7p7tuwxNW+NRKNrPjKRe3y1kuPEYS0vA2Q9izmdtneA6hnn9um5u1FT11BWgQCGnkOqw34SRi9BM="
+  MANDRILL_USERNAME: apps@munki.cl
   REDISTOGO_URL: "redis://redistogo:48f69b364c0e09e5eb91baca4846bf2b@grideye.redistogo.com:9726/"
