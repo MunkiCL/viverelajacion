@@ -84,7 +84,7 @@ gem 'coffee-rails', '>= 4.0.0'
 gem 'less-rails', '>=  2.4.2'
 gem 'sass-rails','>= 4.0.1'
 gem 'less-rails-bootstrap', '>=3.1.1.0'
-
+gem 'fb_graph'
 
 
 # gem 'meta_search'
