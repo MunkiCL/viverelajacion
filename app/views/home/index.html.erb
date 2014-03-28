@@ -1,44 +1,44 @@
 <div class="row">
-	<div class="col-lg-12 col-xs-12" id="portada">
-		<div class="row">
+    <div class="col-lg-12 col-xs-12" id="portada">
+        <div class="row">
             <% if(not @last_tip.nil?) %>
-			<div class="visible-md visible-lg visible-sm hidden-xs" id="saludo">
-				<p class="strong">ÚLTIMOS TIPS</p>
-				<p class="light">
+            <div class="visible-md visible-lg visible-sm hidden-xs" id="saludo">
+                <p class="strong">ÚLTIMOS TIPS</p>
+                <p class="light">
                    <%= truncate(raw(@last_tip.texto),:length => 200,:omision => '...',:escape => false   ) %>
                 </p>
 
-				<div class="row">
-					<div class="col-lg-2 col-md-2 col-sm-2 ">
-						<a href="<%= tip_url(@last_tip) %>" class="btn btn-mas">+Leer más</a>
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 ">
+                        <a href="<%= tip_url(@last_tip) %>" class="btn btn-mas">+Leer más</a>
 
-					</div>
-				</div>
+                    </div>
+                </div>
 
-			</div>
+            </div>
             <% end %>
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
 
 <div class="row">
-	<div class="col-lg-12 col-xs-12" id="who">
-		<p class="title">QUIENES SOMOS</p>
+    <div class="col-lg-12 col-xs-12" id="who">
+        <p class="title">QUIENES SOMOS</p>
 
-		<div class="col-lg-10 col-lg-offset-1">
-			<p class="light">
-			Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. Chorrocientos pituto ubicatex huevo duro bolsero cachureo el hoyo del queque en cana huevón el año del loly hacerla corta impeque de miedo quilterry la raja longi ñecla. Hilo curado rayuela carrete quina guagua lorea piola ni ahí
-			</p>
-		</div>
-	</div>
+        <div class="col-lg-10 col-lg-offset-1">
+            <p class="light">
+            Lorem ipsum dolor sit cuchuflí barquillo bacán jote gamba listeilor po cahuín, luca melón con vino pichanga coscacho ni ahí peinar la muñeca chuchada al chancho achoclonar. Chorrocientos pituto ubicatex huevo duro bolsero cachureo el hoyo del queque en cana huevón el año del loly hacerla corta impeque de miedo quilterry la raja longi ñecla. Hilo curado rayuela carrete quina guagua lorea piola ni ahí
+            </p>
+        </div>
+    </div>
 </div>
 
 
 <div class="row" id="service_anchor">
-	<div class="col-lg-12 col-xs-12">
-		<p class="title">SERVICIOS</p>
+    <div class="col-lg-12 col-xs-12">
+        <p class="title">SERVICIOS</p>
 
-	</div>
+    </div>
     <div class="col-lg-12" id="servicios">
         <a href="/service/kine/">
             <div class="col-lg-4 background" id="kine">
@@ -65,8 +65,8 @@
 </div>
 
 <div class="row">
-	<div class="col-lg-12 col-xs-12" id="promociones">
-		<p class="title">PROMOCIONES</p>
+    <div class="col-lg-12 col-xs-12" id="promociones">
+        <p class="title">PROMOCIONES</p>
         <% if(not @promociones.nil?) %>
         <div class="carousel slide" id="carousel-promo" data-ride="carousel">
             <!-- Indicators -->
@@ -120,7 +120,7 @@
         </div>
         <% end %>
 
-	</div>
+    </div>
 </div>
 
 
@@ -150,7 +150,7 @@
                         </div>
                         <div class="row">
                             <p class="light align-left no-margin-top">
-                                <%= truncate(item.texto,:length => 200,:omision => '...') %>
+                                <%= truncate(item.texto,:length => 200,:omision => '...',:escape => false) %>
                             </p>
                         </div>
 
