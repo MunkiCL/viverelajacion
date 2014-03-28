@@ -27,4 +27,15 @@ describe Tip do
     expect(res.size).to be(4)
 
   end
+
+  it 'Should resize image' do
+    t = FactoryGirl.create(:tip)
+
+    expect(t.portada.width(:large)).to eq(940)
+    expect(t.portada.width(:small)).to eq(200)
+    expect(t.portada.height(:small)).to eq(200)
+    expect(t.portada.image_size(:small)).to eq("200x200")
+  end
+
+
 end

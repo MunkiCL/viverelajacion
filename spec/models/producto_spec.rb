@@ -31,4 +31,13 @@ describe Producto do
     expect(p.count).to be(3)
     expect(p).to eq([p1,p2,p3])
   end
+
+  it 'Should resize image' do
+    p = FactoryGirl.create(:producto)
+    expect(p.imagen.width(:large)).to eq(300)
+    expect(p.imagen.height(:large)).to eq(300)
+    expect(p.imagen.width(:small)).to eq(240)
+    expect(p.imagen.height(:small)).to eq(240)
+    expect(p.imagen.image_size(:small)).to eq("240x240")
+  end
 end

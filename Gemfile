@@ -50,6 +50,7 @@ end
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'tinymce-rails'
 gem 'paperclip', '>= 4.1.1'
+gem 'paperclip-meta'
 gem 'pony'
 gem 'sidekiq'
 

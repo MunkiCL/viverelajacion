@@ -203,6 +203,8 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    paperclip-meta (1.1.0)
+      paperclip (>= 3.0.2, < 5.0)
     pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
@@ -368,6 +370,7 @@ DEPENDENCIES
   less-rails-bootstrap (>= 3.1.1.0)
   mysql2
   paperclip (>= 4.1.1)
+  paperclip-meta
   pg
   pony
   rack-livereload
