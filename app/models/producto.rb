@@ -11,7 +11,7 @@ class Producto < BaseModel
         pages = owner.accounts
         page  = pages.detect {|page| page.identifier == ENV['FACEBOOK_PAGE_ID']}
         page.feed!(
-            :message => "Nueva Promocion!! #{self.nombre}"
+            :message => "Nueva Promocion!! #{self.nombre}",
             :link => "http://www.viverelajacion.cl/store/",
             :name => "Nueva Promocion!! #{self.nombre}",
             :description => truncate(raw(self.descripcion),:length => 150,:omision => '...',:escape => false),
