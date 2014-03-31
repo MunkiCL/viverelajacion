@@ -27,9 +27,15 @@
                                 <div class="col-lg-12 no-margin-bottom"><p class="day"><%= item.created_at.strftime('%d') %></p></div>
                                 <div class="col-lg-12 no-margin-top"><p class="month"><%= item.created_at.strftime('%B') %></p></div>
                                 <div class="col-lg-12">
-                                    <div class="share fb" data-url="<%= tip_url(item) %>"></div>
-                                    <div class="share pn" data-url="<%= tip_url(item) %>"></div>
-                                    <div class="share tw" data-url="<%= tip_url(item) %>"></div>
+                                    <a href="http://www.facebook.com/sharer.php?s=100&p[title]=<%=item.titulo%>&p[url]=<%=tip_url(item)%>&p[images][0]=<%="http://#{request.host}:#{request.port}#{item.portada.url(:large)}"%>" target="_blank">
+                                        <div class="share fb"></div>
+                                    </a>
+                                    <a href="http://pinterest.com/pin/create/button/?url=<%= tip_url(item) %>&media=<%="http://#{request.host}:#{request.port}#{item.portada.url(:large)}"%>" target="_blank">
+                                        <div class="share pn"></div>
+                                    </a>
+                                    <a href="https://twitter.com/share?url=<%=tip_url(item)%>&text=Nuevo en Viverelajacion: <%=item.titulo%>&hashtags=Viverelajacion"  target="_blank">
+                                        <div class="share tw"></div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -37,9 +43,9 @@
                             <p class="title">
                                 <a href="<%= tip_url(item) %>"><%= item.titulo %></a>
                             </p>
-                            <p class="light">
-                                <%= truncate(raw(item.texto),:length => 200,:omision => '...',:escape => false   ) %>
-                            </p>
+                            <div class="light">
+                                <%= truncate(item.texto.html_safe,:length => 200,:omision => '...',:escape => false   ) %>
+                            </div>
                         </div>
                     </div>
                 <% end -%>

@@ -24,9 +24,9 @@
                         <% end %>
                                 <%= image_tag  item.imagen.url(:small),size: item.imagen.image_size(:small) %>
                                 <p class="title"><%= item.nombre %></p>
-                                <p class="light">
-                                    <%= raw(item.descripcion) %>
-                                </p>
+                                <div class="light">
+                                    <%= item.descripcion.html_safe %>
+                                </div>
                             </div>
                     <% end %>
                 </div>
@@ -56,9 +56,9 @@
                         <% end %>
                                 <%= image_tag  item.imagen.url(:small) %>
                                 <p class="title"><%= item.nombre %></p>
-                                <p class="light">
-                                    <%= raw(item.descripcion) %>
-                                </p>
+                                <div class="light">
+                                    <%= item.descripcion.html_safe %>
+                                </div>
                             </div>
                     <% end %>
                 </div>
@@ -87,9 +87,9 @@
                         <% end %>
                                 <%= image_tag  item.imagen.url(:small) %>
                                 <p class="title"><%= item.nombre %></p>
-                                <p class="light">
-                                    <%= raw(item.descripcion) %>
-                                </p>
+                                <div class="light">
+                                    <%= item.descripcion.html_safe %>
+                                </div>
                             </div>
                     <% end %>
                 </div>
