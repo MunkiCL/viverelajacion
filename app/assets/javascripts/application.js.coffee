@@ -89,10 +89,10 @@ $(document).ready  ->
         $('#salida li').removeClass('active')
         $('#'+active).addClass('active')
 
-    $('.share.fb').on 'click', (e) ->
-        target = $(e.currentTarget)
-        url = target.attr('data-url')
-        href="https://www.facebook.com/sharer/sharer.php?u=#{url}"
-        window.location.href=href
+    # $('.share.fb').on 'click', (e) ->
+    #     target = $(e.currentTarget)
+    #     url = target.attr('data-url')
+    #     href="https://www.facebook.com/sharer/sharer.php?u=#{url}"
+    #     window.location.href=href
 
 

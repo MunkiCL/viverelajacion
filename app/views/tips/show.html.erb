@@ -20,9 +20,16 @@
         </div>
         <div class="row">
             <div class="col-lg-5 col-lg-offset-1">
-                <div class="share fb" data-url="<%= tip_url(@tip) %>"></div>
-                <div class="share pn" data-url="<%= tip_url(@tip) %>"></div>
-                <div class="share tw" data-url="<%= tip_url(@tip) %>"></div>
+
+                <a href="http://www.facebook.com/sharer.php?s=100&p[title]=<%=@tip.titulo%>&p[url]=<%=tip_url(@tip)%>&p[images][0]=<%=@image%> target="_blank">
+                    <div class="share fb"></div>
+                </a>
+                <a href="http://pinterest.com/pin/create/button/?url=<%= tip_url(@tip) %>&media=<%=@image%>" target="_blank">
+                    <div class="share pn"></div>
+                </a>
+                <a href="https://twitter.com/share?url=<%=tip_url(@tip)%>&text=Nuevo en Viverelajacion: <%=@tip.titulo%>&hashtags=Viverelajacion"  target="_blank">
+                    <div class="share tw"></div>
+                </a>
             </div>
         </div>
         <div class="row">
