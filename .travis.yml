@@ -1,26 +1,28 @@
 language: ruby
 rvm:
-  - 1.9.3
+- 1.9.3
 bundler_args: "--without production"
 cache: bundler
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - bundle exec rspec
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec
 notifications:
   email:
     recipients:
-      - matias@munki.cl
+    - matias@munki.cl
     on_success: change
     on_failure: always
 deploy:
   provider: heroku
   api_key:
-    secure: "ax+B037mIuUmZqEWZGMWNzrNTg9kpDwBjZFuqCs3n8PzxLdldKegOApM4AIuN/4SivBy917utysV/1bZLJ2hQtAICGJNvBB2GFzOL7zlM0VJ4KqNNzpa5Kz1tOSF/zWyKyzD1mrj5HbNTe08d+5q5pa+zQqxzPvJdqc45304URs="
+    secure: IH2NHNk+wtavp2rovIvyzSnSPTP4M0nWLyBBj3UGgX5MqxuqL+dIJC61lgvoy4z0+BGxfwL+hrQ4YlGx63fbBACbcIG8xsdQSDOTDpAnMBpDmEobfKM0HT4rE3dXpkEm+0Choudw0rxf4eA/0mbqw468b9Jnl4xh6zIhAA/LwgM=
   app: viverelajacion
   run: "rake db:migrate"
   strategy: git
+  on:
+    repo: MunkiStudio/viverelajacion
 env:
-  secure: "F8vYrbseRQL5ER2zRE4TMvh5d5i2L6J9UFbiH1dKqUzw+pjziNnZ8nP/bYTPLU4tKWJHrY923zVYa5KlifdaCMTN+nqOzo9/RUNHjugyTY7kPE2wHqMYUAwqBE0hHf2JLaN6aMDtOx3n2KynmrqVbhxpavGAOp8yHcJvtNuzqxA="
+  secure: F8vYrbseRQL5ER2zRE4TMvh5d5i2L6J9UFbiH1dKqUzw+pjziNnZ8nP/bYTPLU4tKWJHrY923zVYa5KlifdaCMTN+nqOzo9/RUNHjugyTY7kPE2wHqMYUAwqBE0hHf2JLaN6aMDtOx3n2KynmrqVbhxpavGAOp8yHcJvtNuzqxA=
   MANDRILL_USERNAME: apps@munki.cl
-  REDISTOGO_URL: "redis://redistogo:48f69b364c0e09e5eb91baca4846bf2b@grideye.redistogo.com:9726/"
+  REDISTOGO_URL: redis://redistogo:48f69b364c0e09e5eb91baca4846bf2b@grideye.redistogo.com:9726/
