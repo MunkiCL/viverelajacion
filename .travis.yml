@@ -18,8 +18,6 @@ deploy:
   api_key:
     secure: IH2NHNk+wtavp2rovIvyzSnSPTP4M0nWLyBBj3UGgX5MqxuqL+dIJC61lgvoy4z0+BGxfwL+hrQ4YlGx63fbBACbcIG8xsdQSDOTDpAnMBpDmEobfKM0HT4rE3dXpkEm+0Choudw0rxf4eA/0mbqw468b9Jnl4xh6zIhAA/LwgM=
   app: viverelajacion
-  run: "rake db:migrate"
-  strategy: git
   on:
     repo: MunkiStudio/viverelajacion
 env:
