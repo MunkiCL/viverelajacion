@@ -68,7 +68,8 @@ $(document).ready  ->
         catch
             loadGoogleMapsScript()
 
-        if  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        agent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        if  agent === true
             # $('#servicios .background').addClass('overlay').css('display','block')
             $('#servicios, #service_anchor').hide()
             $('a[data-href="/service/kine"]').attr('href','/service/kine')
