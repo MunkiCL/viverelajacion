@@ -9582,3 +9582,82 @@ Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:54:10 -
 
 
 Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 12:00:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.6ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.7ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (2.5ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.6ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (118.3ms)
+Completed 200 OK in 435ms (Views: 326.3ms | ActiveRecord: 7.7ms)
+
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 12:00:20 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 12:00:20 -0400
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 12:00:20 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 12:00:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 12:00:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 12:00:20 -0400
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 12:00:20 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 12:00:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 12:00:20 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 12:00:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 12:00:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 12:00:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 12:00:21 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 12:00:21 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 12:00:21 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 12:00:21 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 12:00:22 -0400
+
+
+Started GET "/assets/img_portada.jpg" for 127.0.0.1 at 2014-05-09 12:00:23 -0400
+
+
+Started GET "/assets/img_servicio-kine.png" for 127.0.0.1 at 2014-05-09 12:00:23 -0400
+
+
+Started GET "/assets/img_servicio-masaje.png" for 127.0.0.1 at 2014-05-09 12:00:23 -0400
+
+
+Started GET "/assets/img_servicio-fisico.png" for 127.0.0.1 at 2014-05-09 12:00:23 -0400
+
+
+Started GET "/assets/btn_fb_normal.png" for 127.0.0.1 at 2014-05-09 12:00:23 -0400
