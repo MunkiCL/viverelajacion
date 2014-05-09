@@ -8423,3 +8423,1162 @@ Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 09:48
   [1m[36m (38.1ms)[0m  [1mSELECT COUNT(*) FROM `tips`[0m
   [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `tips`
   [1m[36mTip Load (0.6ms)[0m  [1mSELECT `tips`.* FROM `tips` LIMIT 5 OFFSET 0[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:39:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1546.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (1288.1ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.7ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (485.1ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.7ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (2289.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:39:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.6ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.9ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.6ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.9ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (477.7ms)
+Completed 500 Internal Server Error in 20724ms
+Completed 500 Internal Server Error in 5056ms
+
+ExecJS::RuntimeError - [stdin]:71:9: error: unexpected if
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        ^^
+  (in /Users/msdark/Development/viverelajacion/app/assets/javascripts/application.js.coffee):
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:47:in `rescue in block in call'
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:43:in `block in call'
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:80:in `block in lock'
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:78:in `lock'
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:42:in `call'
+  coffee-script (2.2.0) lib/coffee_script.rb:57:in `compile'
+  tilt (1.4.1) lib/tilt/coffee.rb:46:in `evaluate'
+  tilt (1.4.1) lib/tilt/template.rb:103:in `render'
+  sprockets (2.11.0) lib/sprockets/context.rb:197:in `block in evaluate'
+  sprockets (2.11.0) lib/sprockets/context.rb:194:in `evaluate'
+  sprockets (2.11.0) lib/sprockets/processed_asset.rb:12:in `initialize'
+  sprockets (2.11.0) lib/sprockets/base.rb:374:in `block in build_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:395:in `circular_call_protection'
+  sprockets (2.11.0) lib/sprockets/base.rb:373:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:94:in `block in build_asset'
+  sprockets (2.11.0) lib/sprockets/caching.rb:58:in `cache_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:93:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:287:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:61:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/bundled_asset.rb:16:in `initialize'
+  sprockets (2.11.0) lib/sprockets/base.rb:377:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:94:in `block in build_asset'
+  sprockets (2.11.0) lib/sprockets/caching.rb:58:in `cache_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:93:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:287:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:61:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/environment.rb:75:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:295:in `[]'
+  sprockets-rails (2.0.1) lib/sprockets/rails/helper.rb:144:in `lookup_asset_for_path'
+  sprockets-rails (2.0.1) lib/sprockets/rails/helper.rb:91:in `block in javascript_include_tag'
+  sprockets-rails (2.0.1) lib/sprockets/rails/helper.rb:90:in `javascript_include_tag'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___454578252715923707_70360430404500'
+  actionpack (4.0.3) lib/action_view/template.rb:143:in `block in render'
+  activesupport (4.0.3) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.3) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.3) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/msdark/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:403:in `_run__1108119885445183428__process_action__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.3) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__4250095307760193661__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack-livereload (0.3.15) lib/rack/livereload.rb:23:in `_call'
+  rack-livereload (0.3.15) lib/rack/livereload.rb:14:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lint.rb:49:in `_call'
+  rack (1.5.2) lib/rack/lint.rb:37:in `call'
+  rack (1.5.2) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.5.2) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.5.2) lib/rack/chunked.rb:43:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.8.2) lib/unicorn/http_server.rb:572:in `process_client'
+  unicorn (4.8.2) lib/unicorn/http_server.rb:666:in `worker_loop'
+  unicorn (4.8.2) lib/unicorn/http_server.rb:521:in `spawn_missing_workers'
+  unicorn (4.8.2) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.2) bin/unicorn:126:in `<top (required)>'
+   () Users/msdark/.rvm/gems/ruby-2.1.1/bin/unicorn:23:in `<main>'
+   () Users/msdark/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
+
+
+ExecJS::RuntimeError - [stdin]:71:9: error: unexpected if
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        ^^
+  (in /Users/msdark/Development/viverelajacion/app/assets/javascripts/application.js.coffee):
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:47:in `rescue in block in call'
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:43:in `block in call'
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:80:in `block in lock'
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:78:in `lock'
+  execjs (2.0.2) lib/execjs/ruby_racer_runtime.rb:42:in `call'
+  coffee-script (2.2.0) lib/coffee_script.rb:57:in `compile'
+  tilt (1.4.1) lib/tilt/coffee.rb:46:in `evaluate'
+  tilt (1.4.1) lib/tilt/template.rb:103:in `render'
+  sprockets (2.11.0) lib/sprockets/context.rb:197:in `block in evaluate'
+  sprockets (2.11.0) lib/sprockets/context.rb:194:in `evaluate'
+  sprockets (2.11.0) lib/sprockets/processed_asset.rb:12:in `initialize'
+  sprockets (2.11.0) lib/sprockets/base.rb:374:in `block in build_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:395:in `circular_call_protection'
+  sprockets (2.11.0) lib/sprockets/base.rb:373:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:94:in `block in build_asset'
+  sprockets (2.11.0) lib/sprockets/caching.rb:58:in `cache_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:93:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:287:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:61:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/bundled_asset.rb:16:in `initialize'
+  sprockets (2.11.0) lib/sprockets/base.rb:377:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:94:in `block in build_asset'
+  sprockets (2.11.0) lib/sprockets/caching.rb:58:in `cache_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:93:in `build_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:287:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/index.rb:61:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/environment.rb:75:in `find_asset'
+  sprockets (2.11.0) lib/sprockets/base.rb:295:in `[]'
+  sprockets-rails (2.0.1) lib/sprockets/rails/helper.rb:144:in `lookup_asset_for_path'
+  sprockets-rails (2.0.1) lib/sprockets/rails/helper.rb:91:in `block in javascript_include_tag'
+  sprockets-rails (2.0.1) lib/sprockets/rails/helper.rb:90:in `javascript_include_tag'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___454578252715923707_70360430407300'
+  actionpack (4.0.3) lib/action_view/template.rb:143:in `block in render'
+  activesupport (4.0.3) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.3) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.3) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/msdark/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:403:in `_run__1108119885445183428__process_action__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.3) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__4250095307760193661__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack-livereload (0.3.15) lib/rack/livereload.rb:23:in `_call'
+  rack-livereload (0.3.15) lib/rack/livereload.rb:14:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lint.rb:49:in `_call'
+  rack (1.5.2) lib/rack/lint.rb:37:in `call'
+  rack (1.5.2) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.5.2) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.5.2) lib/rack/chunked.rb:43:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.8.2) lib/unicorn/http_server.rb:572:in `process_client'
+  unicorn (4.8.2) lib/unicorn/http_server.rb:666:in `worker_loop'
+  unicorn (4.8.2) lib/unicorn/http_server.rb:521:in `spawn_missing_workers'
+  unicorn (4.8.2) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.2) bin/unicorn:126:in `<top (required)>'
+   () Users/msdark/.rvm/gems/ruby-2.1.1/bin/unicorn:23:in `<main>'
+   () Users/msdark/.rvm/gems/ruby-2.1.1/bin/ruby_executable_hooks:15:in `<main>'
+
+
+
+Started POST "/__better_errors/70360500191000/variables" for 127.0.0.1 at 2014-05-09 11:39:43 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:41:27 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (4.3ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.6ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.5ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.4ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 18212ms (Views: 18202.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:41:52 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:41:52 -0400
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:41:53 -0400
+
+
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:41:53 -0400
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:41:53 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:41:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:41:54 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:41:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:41:55 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:41:55 -0400
+
+
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:41:55 -0400
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:41:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:41:58 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:41:58 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:42:00 -0400
+
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:42:01 -0400
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:42:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/assets/img_portada.jpg" for 127.0.0.1 at 2014-05-09 11:42:12 -0400
+
+
+Started GET "/assets/img_servicio-kine.png" for 127.0.0.1 at 2014-05-09 11:42:12 -0400
+
+
+Started GET "/assets/img_servicio-masaje.png" for 127.0.0.1 at 2014-05-09 11:42:12 -0400
+
+
+Started GET "/assets/img_servicio-fisico.png" for 127.0.0.1 at 2014-05-09 11:42:13 -0400
+
+
+Started GET "/assets/btn_fb_normal.png" for 127.0.0.1 at 2014-05-09 11:42:14 -0400
+
+
+Started GET "/service/fisico/" for 127.0.0.1 at 2014-05-09 11:43:26 -0400
+Processing by ServiceController#fisico as HTML
+  Rendered service/_portada.html.erb (0.6ms)
+  Rendered service/fisico.html.erb within layouts/application (286.1ms)
+Completed 200 OK in 458ms (Views: 453.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fisico/entrenamiento.jpg" for 127.0.0.1 at 2014-05-09 11:43:28 -0400
+
+
+Started GET "/assets/fisico/evaluacion.JPG" for 127.0.0.1 at 2014-05-09 11:43:28 -0400
+
+
+Started GET "/assets/fisico/riesgoscardio.jpg" for 127.0.0.1 at 2014-05-09 11:43:28 -0400
+
+
+Started GET "/assets/fisico/post-trauma.jpg" for 127.0.0.1 at 2014-05-09 11:43:28 -0400
+
+
+Started GET "/assets/btn_home.png" for 127.0.0.1 at 2014-05-09 11:43:28 -0400
+
+
+Started GET "/assets/fisico/portada-fisica.jpg" for 127.0.0.1 at 2014-05-09 11:43:28 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:43:45 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (1.0ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.6ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.7ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.6ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (192.9ms)
+Completed 200 OK in 1504ms (Views: 1019.4ms | ActiveRecord: 61.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:44:23 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (456.2ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.5ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.8ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.7ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 2424ms (Views: 1939.8ms | ActiveRecord: 458.2ms)
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:44:30 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:44:31 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:44:31 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:44:31 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:44:31 -0400
+
+
+
+
+
+
+Started GET "/assets/img_servicio-kine.png" for 127.0.0.1 at 2014-05-09 11:44:32 -0400
+Started GET "/assets/img_portada.jpg" for 127.0.0.1 at 2014-05-09 11:44:32 -0400
+Started GET "/assets/img_servicio-masaje.png" for 127.0.0.1 at 2014-05-09 11:44:32 -0400
+
+
+Started GET "/assets/img_servicio-fisico.png" for 127.0.0.1 at 2014-05-09 11:44:32 -0400
+
+
+Started GET "/assets/btn_fb_normal.png" for 127.0.0.1 at 2014-05-09 11:44:32 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:47:59 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.6ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.4ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.5ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.3ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 1.9ms)
+
+
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:00 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:48:01 -0400
+
+
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:48:01 -0400
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:48:01 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:48:01 -0400
+
+
+Started GET "/assets/img_portada.jpg" for 127.0.0.1 at 2014-05-09 11:48:01 -0400
+
+
+Started GET "/assets/img_servicio-kine.png" for 127.0.0.1 at 2014-05-09 11:48:01 -0400
+
+
+Started GET "/assets/img_servicio-masaje.png" for 127.0.0.1 at 2014-05-09 11:48:01 -0400
+
+
+Started GET "/assets/img_servicio-fisico.png" for 127.0.0.1 at 2014-05-09 11:48:01 -0400
+
+
+Started GET "/assets/btn_fb_normal.png" for 127.0.0.1 at 2014-05-09 11:48:01 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:48:33 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.7ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.6ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.9ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.5ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 901ms (Views: 893.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:48:35 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:48:48 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.6ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.5ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (1.2ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.7ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 134ms (Views: 127.4ms | ActiveRecord: 3.0ms)
+
+
+
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:48 -0400
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:48 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:48 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:48 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:48:49 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.7ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.6ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.7ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.6ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 61ms (Views: 54.1ms | ActiveRecord: 2.6ms)
+
+
+
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+
+
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:49:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:49:17 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:49:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:49:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:49:17 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:49:17 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:49:17 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:49:17 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:49:17 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:51:00 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.5ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.4ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.5ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.4ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 101ms (Views: 95.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:00 -0400
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:00 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:51:01 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:51:13 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.6ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.5ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.6ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.4ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 674ms (Views: 668.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:14 -0400
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:14 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:14 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:14 -0400
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:14 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/img_portada.jpg" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/img_servicio-masaje.png" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/img_servicio-kine.png" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/img_servicio-fisico.png" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/assets/btn_fb_normal.png" for 127.0.0.1 at 2014-05-09 11:51:15 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:52:07 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.9ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.5ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.5ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.3ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 2.2ms)
+
+
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/img_portada.jpg" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/img_servicio-kine.png" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+
+
+Started GET "/assets/img_servicio-fisico.png" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+Started GET "/assets/img_servicio-masaje.png" for 127.0.0.1 at 2014-05-09 11:52:08 -0400
+
+
+Started GET "/assets/btn_fb_normal.png" for 127.0.0.1 at 2014-05-09 11:52:09 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:53:05 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.7ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.4ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.6ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (43.4ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (60.1ms)
+Completed 200 OK in 620ms (Views: 570.9ms | ActiveRecord: 45.1ms)
+
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:53:06 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:53:07 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:53:07 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:53:07 -0400
+
+
+Started GET "/assets/img_portada.jpg" for 127.0.0.1 at 2014-05-09 11:53:08 -0400
+
+
+Started GET "/assets/img_servicio-kine.png" for 127.0.0.1 at 2014-05-09 11:53:08 -0400
+
+
+Started GET "/assets/img_servicio-masaje.png" for 127.0.0.1 at 2014-05-09 11:53:08 -0400
+
+
+Started GET "/assets/img_servicio-fisico.png" for 127.0.0.1 at 2014-05-09 11:53:08 -0400
+
+
+Started GET "/assets/btn_fb_normal.png" for 127.0.0.1 at 2014-05-09 11:53:08 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-09 11:53:57 -0400
+Processing by HomeController#index as HTML
+  [1m[35mTip Load (0.5ms)[0m  SELECT `tips`.* FROM `tips` ORDER BY created_at DESC LIMIT 1
+  [1m[36mProducto Load (0.4ms)[0m  [1mSELECT `productos`.* FROM `productos` ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mProducto Load (0.5ms)[0m  SELECT `productos`.* FROM `productos` WHERE (descuento > 0) ORDER BY created_at LIMIT 4
+  [1m[36mTip Load (0.4ms)[0m  [1mSELECT `tips`.* FROM `tips` ORDER BY created_at LIMIT 4[0m
+  Rendered home/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 396ms (Views: 391.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/equipo.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/service.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-09 11:53:58 -0400
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:53:59 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:53:59 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:53:59 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:53:59 -0400
+
+
+Started GET "/service/kine" for 127.0.0.1 at 2014-05-09 11:54:09 -0400
+Processing by ServiceController#kine as HTML
+  Rendered service/_portada.html.erb (0.1ms)
+  Rendered service/kine.html.erb within layouts/application (419.7ms)
+Completed 200 OK in 480ms (Views: 468.8ms | ActiveRecord: 0.0ms)
+
+
+
+
+Started GET "/assets/img_logo-header.png" for 127.0.0.1 at 2014-05-09 11:54:09 -0400
+Started GET "/assets/kine/evaluacion.jpg" for 127.0.0.1 at 2014-05-09 11:54:09 -0400
+
+
+Started GET "/assets/kine/rehabilitacion-operados.jpg" for 127.0.0.1 at 2014-05-09 11:54:09 -0400
+
+
+Started GET "/assets/kine/tobillo.jpg" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/kine/vendajes.jpg" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/kine/rehabilitacion-deportiva.jpg" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/kine/reeducacion.jpg" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/kine/portada-kine.jpg" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/img_convenio-4.jpg" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/img_convenio-1.jpg" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/img_convenio-2.jpg" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/img_convenio-3.jpg" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/btn_home.png" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/img_logo-footer.png" for 127.0.0.1 at 2014-05-09 11:54:10 -0400
+
+
+Started GET "/assets/img_logomunki-footer.png" for 127.0.0.1 at 2014-05-09 11:54:10 -0400

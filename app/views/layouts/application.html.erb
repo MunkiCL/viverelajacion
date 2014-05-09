@@ -64,6 +64,7 @@
             <%= yield %>
         </section>
 
+        <% cache do %>
         <div class="loading-overlay">
             <div class="loading">
                 <%= image_tag 'loading.gif', size: '100x100' %>
@@ -107,7 +108,7 @@
             </div>
 
         </footer>
-
+        <% end %>
 
     </body>
 </html>

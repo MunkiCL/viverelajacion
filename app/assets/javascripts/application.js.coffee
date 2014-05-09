@@ -68,12 +68,19 @@ $(document).ready  ->
         catch
             loadGoogleMapsScript()
 
+        if  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+            # $('#servicios .background').addClass('overlay').css('display','block')
+            $('#servicios, #service_anchor').hide()
+            $('a[data-href="/service/kine"]').attr('href','/service/kine')
+        else
+            $('#servicios .background').on 'mouseenter', ->
+                $('.overlay',this).fadeIn(500)
 
-        $('#servicios .background').on 'mouseenter', ->
-            $('.overlay',this).fadeIn(500)
+            $('#servicios .background').on 'mouseleave', ->
+                $('.overlay',this).fadeOut(500)    
+        
 
-        $('#servicios .background').on 'mouseleave', ->
-            $('.overlay',this).fadeOut(500)
+        
 
     else
         #Fix navigation bar links, swap href with data-href
