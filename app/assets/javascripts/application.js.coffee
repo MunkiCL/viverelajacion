@@ -73,6 +73,7 @@ $(document).ready  ->
             $('#servicios, #service_anchor').hide()
             $('a[data-href="/service/kine"]').attr('href','/service/kine')
         else
+            $('a[data-href="/service/kine"]').attr('href','#service_anchor')
             $('#servicios .background').on 'mouseenter', ->
                 $('.overlay',this).fadeIn(500)
 
