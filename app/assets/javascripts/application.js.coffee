@@ -88,6 +88,8 @@ $(document).ready  ->
         active = window.location.pathname.replace('service','').replace(/\//gi,'')
         $('#salida li').removeClass('active')
         $('#'+active).addClass('active')
+        $('div.foto').removeClass('kine').removeClass('masaje').removeClass('fisico')
+        $('div.foto').addClass(active)
 
     # $('.share.fb').on 'click', (e) ->
     #     target = $(e.currentTarget)

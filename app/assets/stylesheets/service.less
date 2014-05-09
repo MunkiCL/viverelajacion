@@ -13,11 +13,20 @@
     }
 
     .foto{
-        background-image: asset-url('img_portada-servicios.jpg');
+        
         background-repeat: no-repeat;
         .size(100%,680px);
         background-position: center;
         background-size: cover;
+        &.kine{
+            background-image: asset-url('kine/portada-kine.jpg');
+        }
+        &.masaje{
+            background-image: asset-url('masaje/portada-masaje.jpg');
+        }
+        &.fisico{
+            background-image: asset-url('fisico/portada-fisica.jpg');
+        }
     }
 
     #saludo{
