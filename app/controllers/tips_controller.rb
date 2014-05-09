@@ -1,6 +1,7 @@
+require "html_truncator"
 class TipsController < InheritedResources::Base
     def index
-        @tips = Tip.all
+        @tips = Tip.by_creation.limit(20)
     end
 
     def show

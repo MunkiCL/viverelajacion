@@ -85,6 +85,7 @@ gem 'less-rails', '>=  2.4.2'
 gem 'sass-rails','>= 4.0.1'
 gem 'less-rails-bootstrap', '>=3.1.1.0'
 gem 'fb_graph'
-
+gem 'html_truncator', '~>0.2'
+gem  'seed_dump'
 
 # gem 'meta_search'

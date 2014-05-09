@@ -44,7 +44,7 @@
                                 <a href="<%= tip_url(item) %>"><%= item.titulo %></a>
                             </p>
                             <div class="light">
-                                <%= truncate(item.texto.html_safe,:length => 200,:omision => '...',:escape => false   ) %>
+                                <%= raw(HTML_Truncator.truncate(item.texto, 20)) %>
                             </div>
                         </div>
                     </div>

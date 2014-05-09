@@ -149,6 +149,8 @@ GEM
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hike (1.2.3)
+    html_truncator (0.4.0)
+      nokogiri (~> 1.5)
     http_parser.rb (0.5.3)
     httpclient (2.3.4.1)
     i18n (0.6.9)
@@ -297,6 +299,9 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    seed_dump (3.1.0)
+      activerecord
+      activesupport
     sidekiq (2.17.4)
       celluloid (>= 0.15.2)
       connection_pool (>= 1.0.0)
@@ -362,6 +367,7 @@ DEPENDENCIES
   guard
   guard-livereload
   guard-rspec
+  html_truncator (~> 0.2)
   jbuilder (>= 2.0.4)
   jdbc-sqlite3
   jquery-rails (~> 3.1.0)
@@ -381,6 +387,7 @@ DEPENDENCIES
   rspec-sidekiq
   sass-rails (>= 4.0.1)
   sdoc
+  seed_dump
   sidekiq
   sqlite3
   terminal-notifier-guard
