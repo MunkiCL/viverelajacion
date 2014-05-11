@@ -71,9 +71,10 @@ $(document).ready  ->
         agent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
         if  agent == true
             # $('#servicios .background').addClass('overlay').css('display','block')
-            $('#servicios, #service_anchor').hide()
+            $('#service_anchor').hide()
             $('a[data-href="/service/kine"]').attr('href','/service/kine')
         else
+            $('#service_anchor').show()
             $('a[data-href="/service/kine"]').attr('href','#service_anchor')
             $('#servicios .background').on 'mouseenter', ->
                 $('.overlay',this).fadeIn(500)
