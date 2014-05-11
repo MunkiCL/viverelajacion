@@ -74,6 +74,7 @@ $(document).ready  ->
             $('#service_anchor').hide()
             $('a[data-href="/service/kine"]').attr('href','/service/kine')
         else
+            console.log('Desktop');
             $('#service_anchor').show()
             $('a[data-href="/service/kine"]').attr('href','#service_anchor')
             $('#servicios .background').on 'mouseenter', ->
