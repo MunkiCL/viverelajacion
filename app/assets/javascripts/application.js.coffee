@@ -3,6 +3,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap/carousel
 //= require twitter/bootstrap/alert
+//=require twitter/bootstrap/collapse
 //= require turbolinks
 //= require_self
 
@@ -19,10 +20,17 @@ $(document).on 'page:fetch', startSpinner
 $(document).on 'page:receive', stopSpinner
 
 window.initializeMap= ->
+
     center = new google.maps.LatLng(-35.423238,-71.668324)
     mapOptions =
         zoom:14,
         center:center
+        mapTypeControl: false
+        scaleControl:false
+        scrollwheel: false
+        draggable:false
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+    
     map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 
     marker = new google.maps.Marker
@@ -68,20 +76,12 @@ $(document).ready  ->
         catch
             loadGoogleMapsScript()
 
-        agent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-        if  agent == true
-            # $('#servicios .background').addClass('overlay').css('display','block')
-            $('#service_anchor').hide()
-            $('a[data-href="/service/kine"]').attr('href','/service/kine')
-        else
-            console.log('Desktop');
-            $('#service_anchor').show()
-            $('a[data-href="/service/kine"]').attr('href','#service_anchor')
-            $('#servicios .background').on 'mouseenter', ->
-                $('.overlay',this).fadeIn(500)
+        
+        $('#servicios .background').on 'mouseenter', ->
+            $('.overlay',this).fadeIn(500)
 
-            $('#servicios .background').on 'mouseleave', ->
-                $('.overlay',this).fadeOut(500)    
+        $('#servicios .background').on 'mouseleave', ->
+            $('.overlay',this).fadeOut(500)    
         
 
         
