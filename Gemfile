@@ -69,7 +69,6 @@ group :development do
   gem 'rb-inotify', :require => false # for OS X
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'sqlite3'
   gem 'terminal-notifier-guard'
 end
 
