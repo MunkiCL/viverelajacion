@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-ruby "1.9.3"
+ruby "2.1.2"
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
@@ -54,7 +54,7 @@ gem 'pony'
 gem 'sidekiq'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec-rails' #, '~> 3.0.0.beta'
   gem "rspec-sidekiq"
   # gem 'debugger'
   gem "factory_girl_rails"
@@ -69,7 +69,7 @@ group :development do
   gem 'rb-inotify', :require => false # for OS X
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'mysql2'
+  gem 'sqlite3'
   gem 'terminal-notifier-guard'
 end
 
