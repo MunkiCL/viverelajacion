@@ -8,6 +8,7 @@
 body{
     background:#f8f8f8;
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .alert{
@@ -63,6 +64,7 @@ header{
         height:123px;
     }
     #navbar{
+        background-color:white;
         margin-top:30px;
         li{
             a{
@@ -262,8 +264,23 @@ p{
 
 #tips{
     margin-bottom:80px;
-    #second-tips{
+    #second-tips,#first-tips{
         margin-top:30px;
+    }
+    .mini-tips{
+        margin-bottom:10px;
+        .light{
+            width:90%;
+            margin:0 auto;
+            font-size:17px;
+            text-align: justify;
+        }
+        p.tiny{
+            font-size:20px;
+        }
+        p.title{
+            margin-bottom:10px;
+        }
     }
     p.title{
         a{
@@ -278,6 +295,7 @@ p{
     p.tiny{
         font-size:24px;
         font-weight: 300;
+        margin-top:20px;
     }
     p.light{
         font-size:19px;
@@ -293,8 +311,10 @@ p{
             background-color:#0B7CAB;
         }
     }
-    .col-xs-11{
-        float: right !important;
+    .col-xs-12{
+        .btn-mas{
+            width:100%;
+        }
     }
 }
 

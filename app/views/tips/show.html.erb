@@ -15,7 +15,7 @@
                 <p class="title">
                     <%= @tip.titulo %>
                 </p>
-                <%= image_tag @tip.portada.url(:large),size: @tip.portada.image_size(:large) %>
+                <%= image_tag @tip.portada.url(:large),size: @tip.portada.image_size(:large),:class => 'img-responsive' %>
             </div>
         </div>
         <div class="row">

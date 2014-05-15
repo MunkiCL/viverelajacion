@@ -13,14 +13,14 @@
                 <div class="row">
                 <% slice.each_with_index do |item,idx| %>
                     <% if(idx == 0) %>
-                    <div class="col-lg-4 col-lg-offset-2 images">
+                    <div class="col-lg-4 col-lg-offset-2 images visible-lg visible-md">
                     <% else %>
-                    <div class="col-lg-4 images">
+                    <div class="col-lg-4 images visible-lg visible-md">
                     <% end %>
                         <div class="row">
                             <div class="col-lg-6">
                                 <a href="<%= tip_url(item) %>">
-                                    <%= image_tag item.portada.url(:small), size:"200x200", class:"left" %>
+                                    <%= image_tag item.portada.url(:small), size:"200x200", class:"left image-responsive" %>
                                 </a>
                             </div>
                             <div class="col-lg-6">
@@ -47,6 +47,41 @@
                                 <%= raw(HTML_Truncator.truncate(item.texto, 20)) %>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 visible-xs visible-sm mini-videos">
+                        <center>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <a href="<%= tip_url(item) %>">
+                                    <%= image_tag item.portada.url(:small), size:"200x200", class:"left image-responsive" %>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="col-xs-6 col-sm-6 no-margin-bottom"><p class="day"><%= item.created_at.strftime('%d') %></p></div>
+                                <div class="col-xs-6 col-sm-6 no-margin-top"><p class="month"><%= item.created_at.strftime('%B') %></p></div>
+                                <div class="col-xs-12 col-sm-12">
+                                    <a href="http://www.facebook.com/sharer.php?s=100&p[title]=<%=item.titulo%>&p[url]=<%=tip_url(item)%>&p[images][0]=<%="http://#{request.host}:#{request.port}#{item.portada.url(:large)}"%>" target="_blank">
+                                        <div class="share fb"></div>
+                                    </a>
+                                    <a href="http://pinterest.com/pin/create/button/?url=<%= tip_url(item) %>&media=<%="http://#{request.host}:#{request.port}#{item.portada.url(:large)}"%>" target="_blank">
+                                        <div class="share pn"></div>
+                                    </a>
+                                    <a href="https://twitter.com/share?url=<%=tip_url(item)%>&text=Nuevo en Viverelajacion: <%=item.titulo%>&hashtags=Viverelajacion"  target="_blank">
+                                        <div class="share tw"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="title">
+                                <a href="<%= tip_url(item) %>"><%= item.titulo %></a>
+                            </p>
+                            <div class="light">
+                                <%= raw(HTML_Truncator.truncate(item.texto, 20)) %>
+                            </div>
+                        </div>
+                        </center>
                     </div>
                 <% end -%>
                 </div>

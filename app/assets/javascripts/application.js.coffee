@@ -23,7 +23,7 @@ window.initializeMap= ->
 
     center = new google.maps.LatLng(-35.423238,-71.668324)
     mapOptions =
-        zoom:14,
+        zoom:12,
         center:center
         mapTypeControl: false
         scaleControl:false

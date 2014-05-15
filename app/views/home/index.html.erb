@@ -40,7 +40,7 @@
 
 
 
-<div class="row hidden-xs hidden-sm" id="service_anchor">
+<div class="row visible-lg" id="service_anchor">
     <div class="col-lg-12">
         <p class="title">SERVICIOS</p>
 
@@ -141,16 +141,16 @@
             <div class="row" id="first-tips">
             <% slice.each_with_index do |item,idx| %>
                 <% if(idx==0) %>
-                <div class="col-lg-5 col-lg-offset-1 col-md-6 col-xs-11">
+                <div class="col-lg-5 col-lg-offset-1 col-md-6 visible-lg visible-md">
                 <% else %>
-                <div class="col-lg-5 col-md-6 col-xs-11">
+                <div class="col-lg-5 col-md-6 col-xs-11 visible-lg visible-md">
                 <% end %>
-                    <div class="col-lg-6 col-lg-6 col-md-6 col-md-offset-2 col-xs-12">
+                    <div class="col-lg-12 col-md-6 col-md-offset-2 ">
                         <a href="<%= tip_url(item) %>">
                         <%= image_tag item.portada.url(:small), size:"200x200" %>
                         </a>
                     </div>
-                    <article class="col-lg-6 col-lg-6 col-md-11 col-md-offset-1 col-xs-12">
+                    <article class="col-lg-12 col-md-11 col-md-offset-1">
                         <div class="row">
                             <p class="title tiny align-left no-margin-bottom">
                                 <a href="<%= tip_url(item) %>">
@@ -167,13 +167,38 @@
                     </article>
 
                 </div>
+
+                <div class="visible-sm visible-xs col-sm-12 col-xs-12 mini-tips">
+                    <center>
+                    <div class="col-xs-12 col-sm-12">
+                        <a href="<%= tip_url(item) %>">
+                        <%= image_tag item.portada.url(:small), size:"200x200" %>
+                        </a>
+                    </div>
+                    </center>
+                    <article class="col-xs-12 col-sm-12">
+                        <div class="row">
+                            <p class="title tiny">
+                                <a href="<%= tip_url(item) %>">
+                                <%= item.titulo %>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="light no-margin-top">
+                                <%= truncate(strip_tags(item.texto),:length => 250,:omision => '...',:escape => false) %>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
             <% end %>
             </div>
         <% end %>
 
 
         <div class="row">
-            <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-xs-10">
+            <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-xs-12">
                 <a href="/tips" class="btn btn-mas pull-right">+LEER MÁS TIPS</a>
             </div>
         </div>
