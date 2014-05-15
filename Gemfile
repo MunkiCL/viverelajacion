@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-ruby "2.1.2"
+# ruby "2.1.2"
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
@@ -46,7 +46,8 @@ group :production do
   gem 'pg'
 end
 
-gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git' #:github => 'gregbell/active_admin'
+gem 'devise', :github => 'plataformatec/devise'
+gem 'activeadmin', :github => 'gregbell/active_admin'
 gem 'tinymce-rails'
 gem 'paperclip', '>= 4.1.1'
 gem 'paperclip-meta'
@@ -73,7 +74,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara' #, :git => 'https://github.com/jnicklas/capybara.git'
+  gem 'capybara', :git => 'https://github.com/jnicklas/capybara.git'
   gem "database_cleaner"
 
 end
