@@ -1,6 +1,6 @@
 
 <div class="row" id="portada-store">
-    <div class="col-lg-12 col-xs-12 title">
+    <div class="col-lg-12 col-xs-12 col-sm-12 title">
         <p class="title">Store</p>
     </div>
 
@@ -8,7 +8,7 @@
 
 
 <div class="row" id="store-kine">
-    <div class="col-lg-12 col-xs-12 title">
+    <div class="col-lg-12 col-xs-12 col-sm-12 title">
         <p class="title">Kinesiologia</p>
     </div>
     <div class="container">
@@ -17,14 +17,19 @@
                 <div class="row">
                     <% slice.each_with_index do |item,idx| %>
                         <% if(idx == 0) %>
-                            <div class="col-lg-3 col-lg-offset-1 images">
+                            <div class="col-lg-4 col-lg-offset-1 col-sm-6 col-sm-offset-1col-xs-12 images">
 
                         <% else %>
-                            <div class="col-lg-3 images">
+                            <div class="col-lg-3 col-sm-6 col-xs-12 images">
                         <% end %>
-                                <%= image_tag  item.imagen.url(:small),size: item.imagen.image_size(:small) %>
+                                <center>
+                                <%= image_tag  item.imagen.url(:small),size: item.imagen.image_size(:small),:class => 'img-responsive' %>
+                                </center>
+                                <p class="title visible-lg"><%= item.nombre %></p>
+                                <center class="visible-sm visible-xs visible-md col-md-7">
                                 <p class="title"><%= item.nombre %></p>
-                                <div class="light">
+                                </center>
+                                <div class="light col-md-7 col-lg-12">
                                     <%= item.descripcion.html_safe %>
                                 </div>
                             </div>

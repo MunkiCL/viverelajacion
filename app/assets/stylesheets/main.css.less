@@ -18,6 +18,29 @@ body{
     width:100%;
     z-index:9999;
 }
+
+.nav-sm{
+    font:12px/1.0em 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align:center;
+    border-top: 1px #ddd solid;
+    padding-top: 5px;
+    a{
+        color:black;
+        text-decoration:none;
+
+        &:hover{
+            text-decoration:underline;
+        }
+    }
+    .col-xs-4:last-child{
+        margin-left:-20px;
+    }
+    .col-xs-4:first-child{
+        margin-left:20px;
+    }
+}
+
 .loading-overlay{
     display:none;
     width:100%;
@@ -45,6 +68,10 @@ body{
 
 .align-left{
     text-align: left !important;
+}
+
+.align-right{
+    text-align: right !important;
 }
 
 .no-margin-bottom{

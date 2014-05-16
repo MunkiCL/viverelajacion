@@ -23,13 +23,13 @@ window.initializeMap= ->
 
     center = new google.maps.LatLng(-35.423238,-71.668324)
     mapOptions =
-        zoom:12,
+        zoom:15,
         center:center
         mapTypeControl: false
         scaleControl:false
         scrollwheel: false
         draggable:false
-        mapTypeId: google.maps.MapTypeId.SATELLITE
+        # mapTypeId: google.maps.MapTypeId.SATELLITE
     
     map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 
