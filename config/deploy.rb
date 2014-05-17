@@ -2,21 +2,21 @@
 
 # Your cPanel/SSH login name
 
-set :user , "viverela"
+set :user , 'viverela'
 
 
 
 # The domain name of the server to deploy to, this can be your domain or the domain of the server.
 
-set :server_name, "69.25.137.85"
+set :server_name, 'viverelajacion.cl'
 
 
 
 # Your svn / git login name
 
-set :scm_username , "msdark"
+set :scm_username , 'msdark'
 
-set :scm_password, Proc.new { CLI.password_prompt "GIT Password: "}
+set :scm_password, Proc.new { CLI.password_prompt 'GIT Password: '}
 
 
 
@@ -36,13 +36,13 @@ set :scm, :git
 
 # will be deployed to
 
-set :application, "viverelajacion"
+set :application, 'viverelajacion'
 
 
 
 # the url for your repository
 
-set :repository,  "https://github.com/munkistudio/viverelajacion"
+set :repository,  'https://github.com/munkistudio/viverelajacion.git'
 
 
 
@@ -50,7 +50,7 @@ set :repository,  "https://github.com/munkistudio/viverelajacion"
 
 ###### There is no need to edit anything below this line ######
 
-set :deploy_to, "/home/#{user}/#{application}"
+set :deploy_to, '/home/viverela/viverelajacion'
 
 set :use_sudo, false
 

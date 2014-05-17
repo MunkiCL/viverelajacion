@@ -46,8 +46,8 @@ group :production do
   gem 'mysql2'
 end
 
-gem 'devise', :github => 'plataformatec/devise'
-gem 'activeadmin', :github => 'gregbell/active_admin'
+gem 'devise', :git => 'https://github.com/plataformatec/devise' #:github => 'plataformatec/devise'
+gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git' #:github => 'gregbell/active_admin'
 gem 'tinymce-rails'
 gem 'paperclip', '>= 4.1.1'
 gem 'paperclip-meta'
