@@ -3,8 +3,9 @@
 //= require jquery_ujs
 //= require twitter/bootstrap/carousel
 //= require twitter/bootstrap/alert
-//=require twitter/bootstrap/collapse
+//= require twitter/bootstrap/collapse
 //= require turbolinks
+//= require jquery.placeholder-enhanced.min
 //= require_self
 
 
@@ -67,7 +68,7 @@ $(document).ready  ->
 
     # #For Home
     if $('#map-canvas').length > 0
-
+        $('input[placeholder], textarea[placeholder]').placeholderEnhanced();
         try
             if typeof google != 'object' and typeof google.maps != 'object'
                 loadGoogleMapsScript()

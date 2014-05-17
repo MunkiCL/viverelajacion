@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/gregbell/active_admin.git
+  remote: https://github.com/gregbell/active_admin.git
   revision: 27c570994c1c58b070a3a2b97d9f67fb41b78ce9
   specs:
     activeadmin (1.0.0.pre)
@@ -16,17 +16,6 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/plataformatec/devise.git
-  revision: 2f6edfd0c57078a9d518fcd85276e92bc61c3ceb
-  specs:
-    devise (3.2.4)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      thread_safe (~> 0.1)
-      warden (~> 1.2.3)
-
-GIT
   remote: https://github.com/jnicklas/capybara.git
   revision: 2b778ae6dcdaab067edde542b5dd8f05df3ee3ba
   specs:
@@ -36,6 +25,17 @@ GIT
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+
+GIT
+  remote: https://github.com/plataformatec/devise
+  revision: 2f6edfd0c57078a9d518fcd85276e92bc61c3ceb
+  specs:
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
 
 GEM
   remote: https://rubygems.org/
@@ -377,6 +377,7 @@ DEPENDENCIES
   jquery-turbolinks (>= 2.0.2)
   less-rails (>= 2.4.2)
   less-rails-bootstrap (>= 3.1.1.0)
+  minitest (= 4.7.5)
   mysql2
   paperclip (>= 4.1.1)
   paperclip-meta
