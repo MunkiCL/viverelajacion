@@ -11,8 +11,8 @@ Viverelajacion::Application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = true
+  config.consider_all_requests_local       = true #false
+  config.action_controller.perform_caching = false
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -24,7 +24,7 @@ Viverelajacion::Application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
-  config.assets.css_compressor = :yui
+  config.assets.css_compressor = :sass #:yui
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true

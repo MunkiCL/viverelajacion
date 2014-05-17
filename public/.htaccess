@@ -1,3 +1,5 @@
 RackBaseURI /
-RailsEnv development
+PassengerAppEnv production
 PassengerAppRoot /home/viverela/viverelajacion
+#PassengerLogLevel 2
+#PassengerDebugger on
