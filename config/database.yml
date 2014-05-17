@@ -18,4 +18,11 @@ test:
   timeout: 500
 
 production:
-  adapter: pg
+  adapter: mysql2
+  encoding:utf8
+  database: viverela_site
+  username: viverela_admin
+  password: Viverelajacion2014
+  host: localhost
+  socket: /tmp/mysql.sock
+  pool: 5

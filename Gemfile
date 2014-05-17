@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# ruby "2.1.2"
+ruby "2.0.0"
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
@@ -43,7 +43,7 @@ gem 'unicorn'
 group :production do
   gem 'foreman'
   gem 'rails_12factor','>=0.0.2'
-  gem 'pg'
+  gem 'mysql2'
 end
 
 gem 'devise', :github => 'plataformatec/devise'
@@ -71,6 +71,8 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'terminal-notifier-guard'
+  gem 'capistrano'
+  gem 'capistrano-rails'
 end
 
 group :test do
