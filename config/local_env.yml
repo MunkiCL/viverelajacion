@@ -1,0 +1,3 @@
+MANDRILL_API_KEY: O-aOutclZM85B3z8iJXX5g
+MANDRILL_USERNAME: apps@munki.cl
+REDIS_URL: redis://redistogo:8ed9cacc30bc8d38fb01dafb9c3d252f@angelfish.redistogo.com:9647/
