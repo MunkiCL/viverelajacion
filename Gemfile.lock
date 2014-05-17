@@ -38,7 +38,7 @@ GIT
       warden (~> 1.2.3)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.1.0)
       actionpack (= 4.1.0)
@@ -382,7 +382,7 @@ DEPENDENCIES
   jquery-turbolinks (>= 2.0.2)
   less-rails (>= 2.4.2)
   less-rails-bootstrap (>= 3.1.1.0)
-  minitest (= 4.7.5)
+  minitest (~> 5.1)
   mysql2
   paperclip (>= 4.1.1)
   paperclip-meta

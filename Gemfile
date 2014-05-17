@@ -1,7 +1,8 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby "2.0.0"
+gem 'minitest', '~> 5.1'
 gem 'rake','10.3.1'
 gem 'rails', '4.1.0'
 
@@ -93,4 +94,3 @@ gem  'seed_dump'
 
 # gem 'meta_search'
 
-gem 'minitest','4.7.5'
