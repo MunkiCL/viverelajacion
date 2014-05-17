@@ -2,7 +2,7 @@ class Message
   extend ActiveModel::Naming
   include ActiveModel::Conversion
   include ActiveModel::Validations
-
+  include ActionView::Helpers
   # attribute :name
   # attribute :email
   # attribute :content
@@ -28,8 +28,14 @@ class Message
 
   def deliver
     # return false unless valid?
-    MailWorker.perform_async(self.email, self.name, self.content)
-
+    #MailWorker.perform_async(self.email, self.name, self.content)
+    Pony.mail(
+     :from => self.email,
+     :reply_to => self.email,
+     :subject => "Contacto desde Viverelajacion.cl | #{self.name}",
+     :body => self.content,
+     :html_body => simple_format(self.content)
+   )
   end
 
   def persisted?
