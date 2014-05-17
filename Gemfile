@@ -92,3 +92,5 @@ gem 'html_truncator', '~>0.2'
 gem  'seed_dump'
 
 # gem 'meta_search'
+
+gem 'minitest','4.7.5'

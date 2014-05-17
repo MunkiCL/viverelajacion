@@ -382,6 +382,7 @@ DEPENDENCIES
   jquery-turbolinks (>= 2.0.2)
   less-rails (>= 2.4.2)
   less-rails-bootstrap (>= 3.1.1.0)
+  minitest (= 4.7.5)
   mysql2
   paperclip (>= 4.1.1)
   paperclip-meta
