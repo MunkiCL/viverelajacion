@@ -8,5 +8,5 @@ test/bower_components
 .env
 tmp
 log/*
-vendor
-public
+vendor/
+public/
