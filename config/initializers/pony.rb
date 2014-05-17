@@ -1,5 +1,5 @@
 Pony.options = {
-  :to => 'matiasfh@gmail.com',
+  :to => 'contacto@viverelajacion.cl',
   :via => :smtp,
   :via_options => {
     :address              => 'smtp.mandrillapp.com',
