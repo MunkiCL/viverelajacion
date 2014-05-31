@@ -7,7 +7,7 @@ gem 'rake','10.3.1'
 gem 'rails', '4.1.0'
 gem 'rack-cache'
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", :platform => [:ruby, :mswin, :mingw], :group => [:test]
+gem "sqlite3", :platform => [:ruby, :mswin, :mingw], :group => [:test,:development]
 
 # for JRuby
 gem "jdbc-sqlite3", :platform => :jruby, :group => [:test]
@@ -41,9 +41,9 @@ end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 # Use unicorn as the app server
-gem 'unicorn'
+#gem 'unicorn'
 group :production do
-  gem 'foreman'
+  #gem 'foreman'
   gem 'rails_12factor','>=0.0.2'
   gem 'mysql2'
 end
@@ -75,6 +75,7 @@ group :development do
   gem 'terminal-notifier-guard'
   gem 'capistrano'
   gem 'capistrano-rails'
+
 end
 
 group :test do
@@ -93,4 +94,4 @@ gem 'html_truncator', '~>0.2'
 gem  'seed_dump'
 
 # gem 'meta_search'
-
+gem 'meta-tags'

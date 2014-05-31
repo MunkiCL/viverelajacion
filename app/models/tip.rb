@@ -6,6 +6,7 @@ class Tip < BaseModel
     validates_attachment_presence :portada
     after_create    :post_to_facebook
 
+    private
     def post_to_facebook
         if ENV['FACEBOOK_ACCESS_TOKEN']
             owner = FbGraph::User.me(ENV['FACEBOOK_ACCESS_TOKEN'])
