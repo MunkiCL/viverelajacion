@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
     <meta charset="utf-8">
-    <title>Viverelajacion | Kinesiología, Actividad Física y Estética</title>
-    <meta name="description" content="Kinesiología y servicios de salud." >
+    <title>Viverelajacion | Kinesiología y Actividad Física</title>
+    <meta name="description" content="Kinesiología, Actividad Física y servicios de salud." >
     <meta name="keywords" content="Kinesiología,Actividad Física, Recuperación, Masajes, Entrenamiento Personal,Recuperación, Lesiones, Tips, Comunidad">
     
     <%= display_meta_tags :og => {
-          :title    => 'Viverelajacion',
+          :title    => 'Viverelajacion | Kinesiología y Actividad Física',
           :url      => 'http://www.viverelajacion.cl',
-          :image    => 'http://viverelajacion.cl/assets/img_logo-header-dd81ee6485c14850782de6c2e5050286.png'
+          :image    => 'http://viverelajacion.cl/assets/img_logo-header-dd81ee6485c14850782de6c2e5050286.png',
+          :type     => 'website',
+          :site_name=> 'Viverelajacion | Kinesiología y Actividad Física'
         }   %>
+
     <meta name="author" content="Munki Studio" href="http://www.munki.cl">
     <meta name="canonical" content="http://viverelajacion.cl">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="language" content="Spanish" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,800' rel='stylesheet' data-turbolinks-track>
+    <link rel="image_src" href="http://viverelajacion.cl/assets/img_logo-header-dd81ee6485c14850782de6c2e5050286.png" / >
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "main", "data-turbolinks-track" => true%>
     <%= javascript_include_tag "application","data-turbolinks-track" => true %>
